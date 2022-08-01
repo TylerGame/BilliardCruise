@@ -1,0 +1,1097 @@
+fileFormatVersion: 2
+guid: 43d1c88a169d0734db72bb0373239ad0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8797034505942855052
+    second: battery_charge_0
+  - first:
+      213: -1706261793955212563
+    second: battery_charge_1
+  - first:
+      213: -7835656186784197583
+    second: battery_charge_2
+  - first:
+      213: 4499240064097799487
+    second: battery_charge_3
+  - first:
+      213: 7432247989017881534
+    second: battery_charge_4
+  - first:
+      213: -7060799645819557992
+    second: battery_charge_5
+  - first:
+      213: -4601443974307279875
+    second: battery_charge_6
+  - first:
+      213: -7747650347535912581
+    second: battery_charge_7
+  - first:
+      213: 8936489294520794997
+    second: battery_charge_8
+  - first:
+      213: -6384145788848368040
+    second: battery_charge_9
+  - first:
+      213: -1311779759991714605
+    second: battery_charge_10
+  - first:
+      213: 5253088399780150053
+    second: battery_charge_11
+  - first:
+      213: -4909900845290988655
+    second: battery_charge_12
+  - first:
+      213: -5543762739311732546
+    second: battery_charge_13
+  - first:
+      213: 6281143550633567887
+    second: battery_charge_14
+  - first:
+      213: -2804899245091159955
+    second: battery_charge_15
+  - first:
+      213: -2582451451287511490
+    second: battery_charge_16
+  - first:
+      213: -7321950105104158546
+    second: battery_charge_17
+  - first:
+      213: -889449160935857018
+    second: battery_charge_18
+  - first:
+      213: -2884751129373280084
+    second: battery_charge_19
+  - first:
+      213: -3170979487717541738
+    second: battery_charge_20
+  - first:
+      213: -5104118269421741138
+    second: battery_charge_21
+  - first:
+      213: -5708177998204637393
+    second: battery_charge_22
+  - first:
+      213: 4122794124532767878
+    second: battery_charge_23
+  - first:
+      213: 5681650246205430368
+    second: battery_charge_24
+  - first:
+      213: -8099948302821389989
+    second: battery_charge_25
+  - first:
+      213: -5056064053779384545
+    second: battery_charge_26
+  - first:
+      213: 2924443839990023379
+    second: battery_charge_27
+  - first:
+      213: 7832361054683139070
+    second: battery_charge_28
+  - first:
+      213: -5165721907519660795
+    second: battery_charge_29
+  - first:
+      213: 562345152618637135
+    second: battery_charge_30
+  - first:
+      213: -4540243001415092462
+    second: battery_charge_31
+  - first:
+      213: 1344146708606614730
+    second: battery_charge_32
+  - first:
+      213: 3220293431177009621
+    second: battery_charge_33
+  - first:
+      213: -8810369107530359253
+    second: battery_charge_34
+  - first:
+      213: 3051056506416163295
+    second: battery_charge_35
+  - first:
+      213: 6842894411480331113
+    second: battery_charge_36
+  - first:
+      213: -5064944742147952955
+    second: battery_charge_37
+  - first:
+      213: 736455986417544424
+    second: battery_charge_38
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: battery_charge_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 750
+        width: 128
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8de3934648551a70800000000000000
+      internalID: 8797034505942855052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_charge_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 750
+        width: 128
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de29a7540f32258e0800000000000000
+      internalID: -1706261793955212563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_charge_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 750
+        width: 128
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 134d2a49638224390800000000000000
+      internalID: -7835656186784197583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_charge_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 750
+        width: 128
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3d41c31003807e30800000000000000
+      internalID: 4499240064097799487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_charge_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 750
+        width: 128
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebba5041b26a42760800000000000000
+      internalID: 7432247989017881534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_charge_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 750
+        width: 128
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 897a8b0c120030e90800000000000000
+      internalID: -7060799645819557992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_charge_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 625
+        width: 128
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfb8d89b5136420c0800000000000000
+      internalID: -4601443974307279875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_charge_7
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 625
+        width: 128
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b71b037ce01da7490800000000000000
+      internalID: -7747650347535912581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_charge_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 625
+        width: 128
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57f3ef27aa9c40c70800000000000000
+      internalID: 8936489294520794997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_charge_9
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 625
+        width: 128
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 856136dca35f667a0800000000000000
+      internalID: -6384145788848368040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_charge_10
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 625
+        width: 128
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dc8526224f9bcde0800000000000000
+      internalID: -1311779759991714605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_charge_11
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 625
+        width: 128
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52bfe9a4118b6e840800000000000000
+      internalID: 5253088399780150053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_charge_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 500
+        width: 128
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19b5a0ae1378cdbb0800000000000000
+      internalID: -4909900845290988655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_charge_13
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 500
+        width: 128
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb8174429299013b0800000000000000
+      internalID: -5543762739311732546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_charge_14
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 500
+        width: 128
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f86efb6c7ca1b2750800000000000000
+      internalID: 6281143550633567887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_charge_15
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 500
+        width: 128
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6084916ffef219d0800000000000000
+      internalID: -2804899245091159955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_charge_16
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 500
+        width: 128
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3ed054661a492cd0800000000000000
+      internalID: -2582451451287511490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_charge_17
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 500
+        width: 128
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea0f12a3c25336a90800000000000000
+      internalID: -7321950105104158546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_charge_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 375
+        width: 128
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68426ac53ba08a3f0800000000000000
+      internalID: -889449160935857018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_charge_19
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 375
+        width: 128
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca87c44c12e47f7d0800000000000000
+      internalID: -2884751129373280084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_charge_20
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 375
+        width: 128
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 698bb8cd4fa6ef3d0800000000000000
+      internalID: -3170979487717541738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_charge_21
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 375
+        width: 128
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eab198b0a778a29b0800000000000000
+      internalID: -5104118269421741138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_charge_22
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 375
+        width: 128
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2fef469a5a78c0b0800000000000000
+      internalID: -5708177998204637393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_charge_23
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 375
+        width: 128
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68cd7daa96b173930800000000000000
+      internalID: 4122794124532767878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_charge_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 250
+        width: 128
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06ad517dbc649de40800000000000000
+      internalID: 5681650246205430368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_charge_25
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 250
+        width: 128
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b598d471fe3379f80800000000000000
+      internalID: -8099948302821389989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_charge_26
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 250
+        width: 128
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f17bbd0088045d9b0800000000000000
+      internalID: -5056064053779384545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_charge_27
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 250
+        width: 128
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d44f289d26b59820800000000000000
+      internalID: 2924443839990023379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_charge_28
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 250
+        width: 128
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efb0ef0b1e222bc60800000000000000
+      internalID: 7832361054683139070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_charge_29
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 250
+        width: 128
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50d56d55b4baf48b0800000000000000
+      internalID: -5165721907519660795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_charge_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 125
+        width: 128
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f472ff6dfe9ddc700800000000000000
+      internalID: 562345152618637135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_charge_31
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 125
+        width: 128
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21733b2ab01ddf0c0800000000000000
+      internalID: -4540243001415092462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_charge_32
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 125
+        width: 128
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: accf1845f4e57a210800000000000000
+      internalID: 1344146708606614730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_charge_33
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 125
+        width: 128
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d954d550d7c0bc20800000000000000
+      internalID: 3220293431177009621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_charge_34
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 125
+        width: 128
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2ed39dd9f74bb580800000000000000
+      internalID: -8810369107530359253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_charge_35
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 125
+        width: 128
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd964963ab7875a20800000000000000
+      internalID: 3051056506416163295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_charge_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9637ac74638d6fe50800000000000000
+      internalID: 6842894411480331113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_charge_37
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cee94d9793b5b9b0800000000000000
+      internalID: -5064944742147952955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_charge_38
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eca02751da683a00800000000000000
+      internalID: 736455986417544424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      battery_charge_33: 3220293431177009621
+      battery_charge_21: -5104118269421741138
+      battery_charge_22: -5708177998204637393
+      battery_charge_2: -7835656186784197583
+      battery_charge_16: -2582451451287511490
+      battery_charge_25: -8099948302821389989
+      battery_charge_12: -4909900845290988655
+      battery_charge_30: 562345152618637135
+      battery_charge_13: -5543762739311732546
+      battery_charge_26: -5056064053779384545
+      battery_charge_6: -4601443974307279875
+      battery_charge_20: -3170979487717541738
+      battery_charge_28: 7832361054683139070
+      battery_charge_11: 5253088399780150053
+      battery_charge_4: 7432247989017881534
+      battery_charge_38: 736455986417544424
+      battery_charge_34: -8810369107530359253
+      battery_charge_14: 6281143550633567887
+      battery_charge_15: -2804899245091159955
+      battery_charge_0: 8797034505942855052
+      battery_charge_18: -889449160935857018
+      battery_charge_31: -4540243001415092462
+      battery_charge_8: 8936489294520794997
+      battery_charge_1: -1706261793955212563
+      battery_charge_23: 4122794124532767878
+      battery_charge_32: 1344146708606614730
+      battery_charge_9: -6384145788848368040
+      battery_charge_29: -5165721907519660795
+      battery_charge_24: 5681650246205430368
+      battery_charge_37: -5064944742147952955
+      battery_charge_3: 4499240064097799487
+      battery_charge_27: 2924443839990023379
+      battery_charge_36: 6842894411480331113
+      battery_charge_19: -2884751129373280084
+      battery_charge_10: -1311779759991714605
+      battery_charge_35: 3051056506416163295
+      battery_charge_17: -7321950105104158546
+      battery_charge_5: -7060799645819557992
+      battery_charge_7: -7747650347535912581
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

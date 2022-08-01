@@ -1,0 +1,52 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+namespace BilliardCruise.Sava.Scripts
+{
+
+    [RequireComponent(typeof(Image), typeof(AudioSource))]
+    public class Timer : MonoBehaviour {
+
+        public Color normalColor = Color.green;
+        public Color mediumColor = Color.yellow;
+        public Color lowColor = Color.red;
+
+        private Image timerImg;
+        public Image TimerImage {
+            get {
+                return timerImg;
+            }
+        }
+
+        private AudioSource audioSrc;
+
+        private bool isPlayingSound = false;
+
+        void Awake() {
+            timerImg = GetComponent<Image> ();
+            audioSrc = GetComponent<AudioSource> ();
+        }
+
+        public void StartTickSound() {
+            if (isPlayingSound) {
+                return;
+            }
+
+            audioSrc.Play ();
+            isPlayingSound = true;
+        }
+
+        public void StopTickSound() {
+            if (!isPlayingSound) {
+                return;
+            }
+
+            audioSrc.Stop ();
+            isPlayingSound = false;
+        }
+
+    }
+}
+

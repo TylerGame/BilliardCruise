@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d46fcb4f4b5df2c429fa5411ed0381ac, type: 3}
+  m_Name: CuesList
+  m_EditorClassIdentifier: 
+  collectionName: Default
+  cues:
+  - {fileID: 11400000, guid: 848baa3bceee86049b8c384f8c2018a0, type: 2}
+  - {fileID: 11400000, guid: 015e287e43367914489f274c7278d898, type: 2}
+  - {fileID: 11400000, guid: 504322a1f17cadc438444dcf518ca256, type: 2}
+  - {fileID: 11400000, guid: ed9c922d5bafa1d4b89768427ced11ce, type: 2}
+  - {fileID: 11400000, guid: 539767e74d0f4e6409ae68629590cba2, type: 2}
+  maxPower: 10
+  maxSpin: 100
+  maxAim: 0.3
+  maxTime: 45

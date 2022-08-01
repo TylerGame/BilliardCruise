@@ -1,0 +1,472 @@
+fileFormatVersion: 2
+guid: e78cfdf569e4b0246bb4103d4660595c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6896094773494859070
+    second: battery_explosion_0
+  - first:
+      213: 7648048626518556790
+    second: battery_explosion_1
+  - first:
+      213: -7895608090267719549
+    second: battery_explosion_2
+  - first:
+      213: 4352062438118706453
+    second: battery_explosion_3
+  - first:
+      213: -8267267432982299307
+    second: battery_explosion_4
+  - first:
+      213: 7729093433310978433
+    second: battery_explosion_5
+  - first:
+      213: 3656252436557981730
+    second: battery_explosion_6
+  - first:
+      213: -1773166639691362254
+    second: battery_explosion_7
+  - first:
+      213: -7441616882991953062
+    second: battery_explosion_8
+  - first:
+      213: -6977556010166066929
+    second: battery_explosion_9
+  - first:
+      213: -5504204739556067399
+    second: battery_explosion_10
+  - first:
+      213: -2297137069114989242
+    second: battery_explosion_11
+  - first:
+      213: -5352521837009452507
+    second: battery_explosion_12
+  - first:
+      213: -863350802727827303
+    second: battery_explosion_13
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: battery_explosion_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2320
+        width: 1128
+        height: 1160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ca396037562c40a0800000000000000
+      internalID: -6896094773494859070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_explosion_1
+      rect:
+        serializedVersion: 2
+        x: 1128
+        y: 2320
+        width: 1128
+        height: 1160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6708d8864b3532a60800000000000000
+      internalID: 7648048626518556790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_explosion_2
+      rect:
+        serializedVersion: 2
+        x: 2256
+        y: 2320
+        width: 1128
+        height: 1160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38864ed464a2d6290800000000000000
+      internalID: -7895608090267719549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_explosion_3
+      rect:
+        serializedVersion: 2
+        x: 3384
+        y: 2320
+        width: 1128
+        height: 1160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51dc260bab1a56c30800000000000000
+      internalID: 4352062438118706453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_explosion_4
+      rect:
+        serializedVersion: 2
+        x: 4512
+        y: 2320
+        width: 1128
+        height: 1160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55d3fe15214c44d80800000000000000
+      internalID: -8267267432982299307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_explosion_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1160
+        width: 1128
+        height: 1160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1812e40f681434b60800000000000000
+      internalID: 7729093433310978433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_explosion_6
+      rect:
+        serializedVersion: 2
+        x: 1128
+        y: 1160
+        width: 1128
+        height: 1160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 228e13a283e9db230800000000000000
+      internalID: 3656252436557981730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_explosion_7
+      rect:
+        serializedVersion: 2
+        x: 2256
+        y: 1160
+        width: 1128
+        height: 1160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2309f99f5527467e0800000000000000
+      internalID: -1773166639691362254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_explosion_8
+      rect:
+        serializedVersion: 2
+        x: 3384
+        y: 1160
+        width: 1128
+        height: 1160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5b07be4fd01ab890800000000000000
+      internalID: -7441616882991953062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_explosion_9
+      rect:
+        serializedVersion: 2
+        x: 4512
+        y: 1160
+        width: 1128
+        height: 1160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f01e8a507cdba2f90800000000000000
+      internalID: -6977556010166066929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_explosion_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1128
+        height: 1160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b73dbfa3f22d93b0800000000000000
+      internalID: -5504204739556067399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_explosion_11
+      rect:
+        serializedVersion: 2
+        x: 1128
+        y: 0
+        width: 1128
+        height: 1160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 645e403a10eee10e0800000000000000
+      internalID: -2297137069114989242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_explosion_12
+      rect:
+        serializedVersion: 2
+        x: 2256
+        y: 0
+        width: 1128
+        height: 1160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 522c7848fb508b5b0800000000000000
+      internalID: -5352521837009452507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battery_explosion_13
+      rect:
+        serializedVersion: 2
+        x: 3384
+        y: 0
+        width: 1128
+        height: 1160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9980cd6e403c404f0800000000000000
+      internalID: -863350802727827303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      battery_explosion_2: -7895608090267719549
+      battery_explosion_1: 7648048626518556790
+      battery_explosion_3: 4352062438118706453
+      battery_explosion_4: -8267267432982299307
+      battery_explosion_10: -5504204739556067399
+      battery_explosion_5: 7729093433310978433
+      battery_explosion_9: -6977556010166066929
+      battery_explosion_0: -6896094773494859070
+      battery_explosion_12: -5352521837009452507
+      battery_explosion_8: -7441616882991953062
+      battery_explosion_11: -2297137069114989242
+      battery_explosion_7: -1773166639691362254
+      battery_explosion_6: 3656252436557981730
+      battery_explosion_13: -863350802727827303
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
