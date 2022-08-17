@@ -14,11 +14,12 @@ namespace BilliardCruise.Sava.Scripts
             Octopus,
             Shark,
             Box,
-            Battery
+            Battery,
+            Bottle
         }
         public MonsterType monsterType = MonsterType.Shark;
-        public GameObject prefabOfHealthBar;
-        private GameObject healthBar;
+
+        public SpriteRenderer healthBar;
         public GameObject particle;
         Animator animatorOfParticle;
         Animator animatorOfMonster;
@@ -33,17 +34,19 @@ namespace BilliardCruise.Sava.Scripts
         Vector3[] dirs = new Vector3[8];
         bool isCharging = false;
 
+        public GameObject ballIn;
+
+        public GameObject prefabeOfUtilsforEffects;
+
+        public GameObject left_neighbor;
+        public GameObject right_neighbor;
+
         // Start is called before the first frame update
         void Start()
         {
-            Transform parentOfHealthBar = GameObject.Find("ExtraUI").transform;
-            if (prefabOfHealthBar != null)
-            {
-                healthBar = Instantiate(prefabOfHealthBar, parentOfHealthBar);
-                healthBar.GetComponent<UIFollow3DObject>().target = transform;
-            }
-
             currentHealth = MaxHealth;
+            if (healthBar != null)
+                healthBar.size = new Vector2(currentHealth / MaxHealth, 0.65f);
             if (particle != null)
                 animatorOfParticle = particle.GetComponent<Animator>();
             animatorOfMonster = GetComponent<Animator>();
@@ -77,7 +80,6 @@ namespace BilliardCruise.Sava.Scripts
             animatorOfMonster.SetTrigger("Charge");
             yield return new WaitForSeconds(5f);
             isCharging = false;
-
         }
 
         void OnCollisionEnter(Collision collision)
@@ -99,47 +101,97 @@ namespace BilliardCruise.Sava.Scripts
                     case MonsterType.Battery:
                         CollisionWithNonLiveBeing();
                         break;
+                    case MonsterType.Bottle:
+                        CrackBottle();
+                        break;
                 }
             }
         }
 
-        void CollisionWithLiveBeing()
+
+        void CrackBottle()
         {
+            if (!isDead)
+            {
+                isDead = true;
+                animatorOfParticle.SetTrigger("Crack");
+                animatorOfMonster.SetTrigger("Break");
+                GetComponent<Collider>().enabled = false;
+                // GetComponentInChildren<Collider>().enabled = false;
+                StartCoroutine(iDoDeath());
+                if (ballIn != null)
+                {
+                    ballIn.GetComponent<Rigidbody>().isKinematic = false;
+                    ballIn.GetComponent<Collider>().enabled = true;
+                    ballIn.GetComponent<Rigidbody>().AddForce(Random.insideUnitCircle.normalized * Random.Range(1f, 5f));
+                }
+
+            }
+        }
+        public void CollisionWithLiveBeing()
+        {
+            if (GameManager.Instance.isTriggerStrengthEffect)
+                damage = 10000f;
             currentHealth -= damage;
             if (currentHealth <= 0)
             {
                 currentHealth = 0;
-                healthBar.GetComponentsInChildren<Image>()[1].fillAmount = currentHealth / MaxHealth;
+                if (healthBar != null)
+                    healthBar.size = new Vector2(currentHealth / MaxHealth, 0.65f);
                 if (!isDead)
                 {
                     animatorOfParticle.SetTrigger("SmokeRadial");
                     isDead = true;
                     GetComponent<Collider>().enabled = false;
-                    healthBar.SetActive(false);
+
+                    if (healthBar != null)
+                        healthBar.enabled = false;
                     StartCoroutine(iDoDeath());
                 }
             }
             else
             {
-                healthBar.GetComponentsInChildren<Image>()[1].fillAmount = currentHealth / MaxHealth;
+                if (healthBar != null)
+                    healthBar.size = new Vector2(currentHealth / MaxHealth, 0.65f);
                 animatorOfParticle.SetTrigger("WaterSplash");
                 animatorOfMonster.SetTrigger("Hit");
             }
         }
 
-        void CollisionWithNonLiveBeing()
+        public void CollisionWithNonLiveBeing()
         {
-
             if (!isDead)
             {
+                if (GameManager.Instance.isTriggerStrengthEffect)
+                {
+                    StartCoroutine(iCollisionChain());
+                }
+
                 animatorOfMonster.SetTrigger("Explosion");
                 isDead = true;
                 GetComponent<Collider>().enabled = false;
-                StartCoroutine(iDoDeath());
-            }
+                if (right_neighbor != null)
+                {
+                    right_neighbor.GetComponent<Monster>().left_neighbor = left_neighbor;
+                }
+                if (left_neighbor != null)
+                {
+                    left_neighbor.GetComponent<Monster>().right_neighbor = right_neighbor;
+                }
 
+
+                StartCoroutine(iDoDeath());
+
+            }
         }
 
+
+        IEnumerator iCollisionChain()
+        {
+            yield return new WaitForEndOfFrame();
+            if (right_neighbor != null)
+                right_neighbor.GetComponent<Monster>().CollisionWithNonLiveBeing();
+        }
 
         public void AttackPlayer()
         {
@@ -156,7 +208,6 @@ namespace BilliardCruise.Sava.Scripts
                 if (!Physics.SphereCast(transform.position + new Vector3(0, 0, 0.5f), 0.5f, dir, out hit, 2f))
                 {
                     i_dirs.Add(i);
-                    Debug.Log("i === " + i);
                 }
                 i++;
             }
@@ -207,8 +258,8 @@ namespace BilliardCruise.Sava.Scripts
             }
 
             yield return new WaitForSeconds(1f);
-            if (healthBar != null)
-                Destroy(healthBar);
+            // if (healthBar != null)
+            //     Destroy(healthBar);
             Destroy(gameObject);
 
         }

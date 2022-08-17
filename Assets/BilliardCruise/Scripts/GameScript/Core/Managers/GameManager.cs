@@ -46,6 +46,12 @@ namespace BilliardCruise.Sava.Scripts
         private int booster1, booster2, booster3;
 
         private int _moves, _goal, _level, _ballCount;
+
+        public bool isTriggerArrowEffect = false;
+        public bool isTriggerStrengthEffect = false;
+        public bool isTriggerEyeEffect = false;
+        public bool isTriggerDiceEffect = false;
+        public bool isMoving = false;
         public int moves
         {
             get
@@ -59,10 +65,11 @@ namespace BilliardCruise.Sava.Scripts
                     GameUI.Instance.DoClickAnim(GameUI.AnimationName.ClickMove);
                 _moves = value;
 
-                if (_moves == 0)
-                {
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-                }
+                // if (_moves == 0)
+                // {
+                //     // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                //     GameUI.Instance.ShowLoosePopup();
+                // }
             }
         }
 
@@ -78,25 +85,15 @@ namespace BilliardCruise.Sava.Scripts
                 if (value != 0)
                     GameUI.Instance.DoClickAnim(GameUI.AnimationName.ClickGoal);
                 _goal = value;
-                if (_goal == gameData.levels[level].goal)
-                {
-                    GameUI.Instance.ShowRewardPopup();
-                }
+                // if (_goal == gameData.levels[level].goal)
+                // if (_goal == 1)
+                // {
+                //     GameUI.Instance.ShowRewardPopup();
+                // }
             }
         }
 
-        public int level
-        {
-            get
-            {
-                return _level;
-            }
-            set
-            {
-
-                _level = value;
-            }
-        }
+        public int level;
 
 
         public int ballCount
@@ -119,6 +116,42 @@ namespace BilliardCruise.Sava.Scripts
             }
         }
 
+        public void ResetBoosters()
+        {
+
+
+            // PoolManager.Instance.CueBall.GetComponent<Ball_Local>().boosterEffectManager.SwitchInvisibleEffect(false);
+            // PoolManager.Instance.CueBall.GetComponent<Ball_Local>().boosterEffectManager.SwitchStrengthEffect(false);
+            if (isTriggerEyeEffect)
+            {
+                GameObject[] monsters = GameObject.FindGameObjectsWithTag("Monster");
+                foreach (GameObject monster in monsters)
+                {
+                    if (monster.GetComponent<Monster>().monsterType == Monster.MonsterType.Fish || monster.GetComponent<Monster>().monsterType == Monster.MonsterType.Octopus || monster.GetComponent<Monster>().monsterType == Monster.MonsterType.Shark || monster.GetComponent<Monster>().monsterType == Monster.MonsterType.Box)
+                    {
+                        SpriteRenderer[] sprs = monster.GetComponentsInChildren<SpriteRenderer>();
+                        foreach (SpriteRenderer spr in sprs)
+                        {
+                            spr.color = new Color(spr.color.r, spr.color.g, spr.color.b, 1f);
+
+                        }
+
+                        Collider[] colliders = monster.GetComponentsInChildren<Collider>();
+                        foreach (Collider col in colliders)
+                        {
+                            col.enabled = true;
+                        }
+                    }
+                }
+            }
+
+            isTriggerArrowEffect = false;
+            isTriggerDiceEffect = false;
+            isTriggerEyeEffect = false;
+            isTriggerStrengthEffect = false;
+
+        }
+
         public static void AddBall(int ballNumber, Ball ball)
         {
             ballsDictionary.Add(ballNumber, ball);
@@ -138,6 +171,7 @@ namespace BilliardCruise.Sava.Scripts
 
         void Awake()
         {
+
             if (instance != null)
                 Destroy(this);
             else
@@ -147,13 +181,11 @@ namespace BilliardCruise.Sava.Scripts
 
             DontDestroyOnLoad(this.gameObject);
 
-            level = 0;
-
             moves = gameData.levels[level].moves;
             goal = 0;
-            booster1 = gameData.boostersOfGame[level].boosters[0].count;
-            booster2 = gameData.boostersOfGame[level].boosters[1].count;
-            booster3 = gameData.boostersOfGame[level].boosters[2].count;
+            booster1 = gameData.levels[level].boosters[0].count;
+            booster2 = gameData.levels[level].boosters[1].count;
+            booster3 = gameData.levels[level].boosters[2].count;
         }
 
         void Start()
@@ -175,8 +207,6 @@ namespace BilliardCruise.Sava.Scripts
 
         public void UpdateMoves()
         {
-
-
             if (moves > 0)
                 moves--;
             GameUI.Instance.UpdateTopUI();
@@ -184,7 +214,6 @@ namespace BilliardCruise.Sava.Scripts
 
         public void UpdateGoal()
         {
-
             if (goal < gameData.levels[level].goal)
                 goal++;
             GameUI.Instance.UpdateTopUI();

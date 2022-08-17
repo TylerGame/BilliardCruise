@@ -10,19 +10,19 @@ namespace BilliardCruise.Sava.Scripts
     [CreateAssetMenu(fileName = "GameData", menuName = "GameData", order = 1)]
     public class GameData : ScriptableObject
     {
-        [Header("Boosters for Each Level")]
-        public List<BoostersOfLevel> boostersOfGame;
+        // [Header("Boosters for Each Level")]
+        // public List<BoostersOfLevel> boostersOfGame;
 
         [Header("Data Collection of Level")]
         public List<LevelData> levels;
     }
 
 
-    [Serializable]
-    public class BoostersOfLevel
-    {
-        public List<Booster> boosters;
-    }
+    // [Serializable]
+    // public class BoostersOfLevel
+    // {
+    //     public List<Booster> boosters;
+    // }
 
 
     [Serializable]
@@ -49,6 +49,8 @@ namespace BilliardCruise.Sava.Scripts
 
         // [Header("Number of Goal")]
         public int goal = 3;
+
+        public List<Booster> boosters;
     }
 
 

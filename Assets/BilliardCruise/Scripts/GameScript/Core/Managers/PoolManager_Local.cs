@@ -73,7 +73,7 @@ namespace BilliardCruise.Sava.Scripts
             StartTimer(player);
             if (player.GetType() != typeof(Player_AI))
             {
-                gameUI.EnableControls(true);
+                // gameUI.EnableControls(true);
             }
             if (ballInHand && isBreak)
             {

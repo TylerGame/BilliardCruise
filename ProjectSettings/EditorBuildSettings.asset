@@ -12,9 +12,9 @@ EditorBuildSettings:
     path: Assets/BilliardCruise/Scenes/Menu.unity
     guid: dd74457550d6561498019edef774544d
   - enabled: 1
-    path: Assets/BilliardCruise/Scenes/Level01.unity
-    guid: 97289eb528682ba45b514c73b137619e
+    path: Assets/BilliardCruise/Scenes/Level00.unity
+    guid: 7e57d7e7b602f8a4582ac3faab3128e7
   - enabled: 1
-    path: Assets/BilliardCruise/Scenes/Level02.unity
-    guid: 3c235565796620b4a9ff5441c31cfe7f
+    path: Assets/BilliardCruise/Scenes/Level01.unity
+    guid: 4196030c5361d4943a16fe3c0575ebff
   m_configObjects: {}

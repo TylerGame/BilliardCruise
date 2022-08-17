@@ -47,10 +47,11 @@ namespace BilliardCruise.Sava.Scripts
         [SerializeField]
         GameObject obj_booster1, obj_booster2, obj_booster3;
         [SerializeField]
-        GameObject popups, rewardPopup, levelPopup;
-
-
-
+        GameObject popups, rewardPopup, levelPopup, loosePopup, loadingUI;
+        [SerializeField]
+        Image obj_loadingBarForeground;
+        [SerializeField]
+        public Image c_text1, c_text2, c_text3, c_text4;
         public enum AnimationName
         {
             ClickMove,
@@ -82,6 +83,7 @@ namespace BilliardCruise.Sava.Scripts
         void Start()
         {
             EnableControls(false);
+            loadingUI.SetActive(false);
             UpdateTopUI();
             // StartCoroutine(iTest());
         }
@@ -167,6 +169,7 @@ namespace BilliardCruise.Sava.Scripts
             InputManager.Instance.Lock();
             popups.SetActive(true);
             levelPopup.SetActive(false);
+            loosePopup.SetActive(false);
             rewardPopup.SetActive(true);
             rewardPopup.GetComponent<RectTransform>().DOPunchScale(Vector3.one * 0.3f, 0.5f, 0, 1);
         }
@@ -176,16 +179,123 @@ namespace BilliardCruise.Sava.Scripts
             InputManager.Instance.Lock();
             popups.SetActive(true);
             rewardPopup.SetActive(false);
+            loosePopup.SetActive(false);
             levelPopup.SetActive(true);
             levelPopup.GetComponent<RectTransform>().DOPunchScale(Vector3.one * 0.3f, 0.5f, 1);
         }
 
+        public void ShowLoosePopup()
+        {
+            InputManager.Instance.Lock();
+            popups.SetActive(true);
+            rewardPopup.SetActive(false);
+            levelPopup.SetActive(false);
+            loosePopup.SetActive(true);
+            levelPopup.GetComponent<RectTransform>().DOPunchScale(Vector3.one * 0.3f, 0.5f, 1);
+        }
+
+        public void OnClick_TryAgain()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+
         public void OnClick_NextLevel()
         {
-            GameManager.Instance.level++;
-            SceneManager.LoadScene("Level0" + GameManager.Instance.level);
+            // SceneManager.LoadScene("Level0" + (GameManager.Instance.level + 1).ToString());
+            popups.SetActive(false);
+            StartCoroutine(iLoading());
+            loadingUI.SetActive(true);
+            StartCoroutine(iDisplayingText());
+        }
+
+
+
+        IEnumerator iLoading()
+        {
+            float loadingTime = 0f;
+            obj_loadingBarForeground.fillAmount = 0f;
+            while (true)
+            {
+                loadingTime += (Time.deltaTime * 10f);
+                yield return new WaitForSeconds(0.1f);
+                obj_loadingBarForeground.fillAmount = (loadingTime / 3f);
+                if (loadingTime >= 3f)
+                    break;
+            }
+
+            if (GameManager.Instance.level == 1)
+            {
+                SceneManager.LoadScene("Menu");
+            }
+            else
+            {
+                SceneManager.LoadScene("Level0" + (GameManager.Instance.level + 1).ToString());
+            }
+
+        }
+
+
+
+        IEnumerator iDisplayingText()
+        {
+            yield return null;
+            while (true)
+            {
+                c_text1.GetComponent<RectTransform>().DOAnchorPosX(0, 0.2f, false);
+                yield return new WaitForSeconds(2f);
+                c_text1.GetComponent<RectTransform>().DOAnchorPosX(4654, 0.5f, false).OnComplete(() =>
+                {
+                    c_text1.GetComponent<RectTransform>().SetLeft(-4654f);
+                    c_text1.GetComponent<RectTransform>().SetRight(4654f);
+                });
+
+
+                c_text2.GetComponent<RectTransform>().DOAnchorPosX(0, 0.2f, false);
+                yield return new WaitForSeconds(2f);
+                c_text2.GetComponent<RectTransform>().DOAnchorPosX(4654, 0.5f, false).OnComplete(() =>
+                {
+                    c_text2.GetComponent<RectTransform>().SetLeft(-4654f);
+                    c_text2.GetComponent<RectTransform>().SetRight(4654f);
+                });
+
+
+                c_text3.GetComponent<RectTransform>().DOAnchorPosX(0, 0.2f, false);
+                yield return new WaitForSeconds(2f);
+                c_text3.GetComponent<RectTransform>().DOAnchorPosX(4654, 0.5f, false).OnComplete(() =>
+                {
+                    c_text3.GetComponent<RectTransform>().SetLeft(-4654f);
+                    c_text3.GetComponent<RectTransform>().SetRight(4654f);
+                });
+
+
+                c_text4.GetComponent<RectTransform>().DOAnchorPosX(0, 0.2f, false);
+                yield return new WaitForSeconds(2f);
+                c_text4.GetComponent<RectTransform>().DOAnchorPosX(4654, 0.5f, false).OnComplete(() =>
+                {
+                    c_text4.GetComponent<RectTransform>().SetLeft(-4654f);
+                    c_text4.GetComponent<RectTransform>().SetRight(4654f);
+                });
+
+            }
+        }
+
+
+        public void OnClick_WinPopupClose()
+        {
+            SceneManager.LoadScene("Menu");
+        }
+
+        public void OnClick_LevelPopupClose()
+        {
+            SceneManager.LoadScene("Menu");
+        }
+
+        public void OnClick_LoosePopupClose()
+        {
+            SceneManager.LoadScene("Menu");
         }
 
     }
+
 }
 

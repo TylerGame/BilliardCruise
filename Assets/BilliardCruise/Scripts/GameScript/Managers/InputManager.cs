@@ -127,8 +127,9 @@ namespace BilliardCruise.Sava.Scripts
 		for(int i = 0; i < Input.touchCount; i++) {
 			Touch touch = Input.GetTouch(i);
 			if (ignoreUI && EventSystem.current.IsPointerOverGameObject (touch.fingerId)) {
+                
 				return;
-			}
+			}            
 
 			if(touch.phase == TouchPhase.Began) {
 				touchStarted = true;
@@ -157,6 +158,7 @@ namespace BilliardCruise.Sava.Scripts
         public void IgnoreUI(bool ignore)
         {
             ignoreUI = ignore;
+
         }
 
         public void Lock()

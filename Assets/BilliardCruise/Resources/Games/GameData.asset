@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e68ca0e541b737a4f90dbd51ba8036bd, type: 3}
+  m_Name: GameData
+  m_EditorClassIdentifier: 
+  levels:
+  - level: 1
+    moves: 10
+    goal: 3
+    boosters:
+    - booster: 0
+      active_icon: {fileID: 21300000, guid: 7bdf49ddb8c7f7f4e92cc98240d83f41, type: 3}
+      deactive_icon: {fileID: 21300000, guid: 76bd0b4d543bec044a4f80311191859c, type: 3}
+      count: 0
+    - booster: 1
+      active_icon: {fileID: 21300000, guid: 1a49bb2dbd9b22440b328f629fd5a0f5, type: 3}
+      deactive_icon: {fileID: 21300000, guid: d929e781c125bb64a8124a79bbfeb61f, type: 3}
+      count: 2
+    - booster: 3
+      active_icon: {fileID: 21300000, guid: 16ba6aba5f708484c96eeff74424d41f, type: 3}
+      deactive_icon: {fileID: 21300000, guid: 2da59b29a7673ca4e90bd963d6adb9d0, type: 3}
+      count: 2
+  - level: 2
+    moves: 15
+    goal: 5
+    boosters:
+    - booster: 0
+      active_icon: {fileID: 21300000, guid: 7bdf49ddb8c7f7f4e92cc98240d83f41, type: 3}
+      deactive_icon: {fileID: 21300000, guid: 76bd0b4d543bec044a4f80311191859c, type: 3}
+      count: 0
+    - booster: 1
+      active_icon: {fileID: 21300000, guid: 1a49bb2dbd9b22440b328f629fd5a0f5, type: 3}
+      deactive_icon: {fileID: 21300000, guid: d929e781c125bb64a8124a79bbfeb61f, type: 3}
+      count: 3
+    - booster: 3
+      active_icon: {fileID: 21300000, guid: 16ba6aba5f708484c96eeff74424d41f, type: 3}
+      deactive_icon: {fileID: 21300000, guid: 2da59b29a7673ca4e90bd963d6adb9d0, type: 3}
+      count: 3

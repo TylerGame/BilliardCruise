@@ -227,7 +227,7 @@ namespace BilliardCruise.Sava.Scripts
         protected virtual void Start()
         {
 
-
+            table = GameObject.Find("TableObjects").GetComponent<Table>();
 
         }
 
@@ -429,6 +429,21 @@ namespace BilliardCruise.Sava.Scripts
             {
                 yield return new WaitForSeconds(checkInterval);
             }
+            GameManager.Instance.isMoving = false;
+            GameManager.Instance.ResetBoosters();
+
+            if (GameManager.Instance.moves == 0)
+            {
+                // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                GameUI.Instance.ShowLoosePopup();
+            }
+
+            if (GameManager.Instance.goal >= GameManager.Instance.gameData.levels[GameManager.Instance.level].goal)
+            // if (GameManager.Instance.goal > 0)
+            {
+                GameUI.Instance.ShowRewardPopup();
+            }
+
         }
 
         protected void ContinueTurn()
@@ -539,6 +554,11 @@ namespace BilliardCruise.Sava.Scripts
                 if (!ball.IsAtRest)
                 {
                     return false;
+                }
+                else
+                {
+                    ball.boosterEffectManager.SwitchInvisibleEffect(false);
+                    ball.boosterEffectManager.SwitchStrengthEffect(false);
                 }
             }
 

@@ -1,0 +1,2622 @@
+fileFormatVersion: 2
+guid: 5069a725f54ec684ca7c3b20e7d40291
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5446853845934088793
+    second: glitter_animation_0
+  - first:
+      213: 808979255606664374
+    second: glitter_animation_1
+  - first:
+      213: -5555055031192176929
+    second: glitter_animation_2
+  - first:
+      213: 4217796796219926242
+    second: glitter_animation_3
+  - first:
+      213: -5080769951984166176
+    second: glitter_animation_4
+  - first:
+      213: -5915658878058402488
+    second: glitter_animation_5
+  - first:
+      213: 821466326148601435
+    second: glitter_animation_6
+  - first:
+      213: -1524277363864200297
+    second: glitter_animation_7
+  - first:
+      213: 3254615915497063035
+    second: glitter_animation_8
+  - first:
+      213: 2849662529737837847
+    second: glitter_animation_9
+  - first:
+      213: 5462014897900404706
+    second: glitter_animation_10
+  - first:
+      213: 8905801611366224356
+    second: glitter_animation_11
+  - first:
+      213: 5312978357017705636
+    second: glitter_animation_12
+  - first:
+      213: -615930621058760545
+    second: glitter_animation_13
+  - first:
+      213: 909291499617744638
+    second: glitter_animation_14
+  - first:
+      213: 4156014182970699591
+    second: glitter_animation_15
+  - first:
+      213: 6515942909981542495
+    second: glitter_animation_16
+  - first:
+      213: 2304276035480652653
+    second: glitter_animation_17
+  - first:
+      213: 5172627306913953397
+    second: glitter_animation_18
+  - first:
+      213: 4419869539597026100
+    second: glitter_animation_19
+  - first:
+      213: -5024730940459807782
+    second: glitter_animation_20
+  - first:
+      213: -6814212293140602565
+    second: glitter_animation_21
+  - first:
+      213: 5332513144414066626
+    second: glitter_animation_22
+  - first:
+      213: -4169282820157188539
+    second: glitter_animation_23
+  - first:
+      213: 8190674688881880287
+    second: glitter_animation_24
+  - first:
+      213: 99430241616382524
+    second: glitter_animation_25
+  - first:
+      213: -4300249382810570266
+    second: glitter_animation_26
+  - first:
+      213: -4890326651611961825
+    second: glitter_animation_27
+  - first:
+      213: -3354117652309378448
+    second: glitter_animation_28
+  - first:
+      213: 8028749764496922064
+    second: glitter_animation_29
+  - first:
+      213: 7131643519173448329
+    second: glitter_animation_30
+  - first:
+      213: -3429743643151370443
+    second: glitter_animation_31
+  - first:
+      213: -7886659778544748798
+    second: glitter_animation_32
+  - first:
+      213: 6887212709940722801
+    second: glitter_animation_33
+  - first:
+      213: -2933909831117830153
+    second: glitter_animation_34
+  - first:
+      213: -2037924718400742649
+    second: glitter_animation_35
+  - first:
+      213: -7151055266057959939
+    second: glitter_animation_36
+  - first:
+      213: 3109822332928321873
+    second: glitter_animation_37
+  - first:
+      213: -5155667199538778719
+    second: glitter_animation_38
+  - first:
+      213: 684271446017507314
+    second: glitter_animation_39
+  - first:
+      213: 506854698306816420
+    second: glitter_animation_40
+  - first:
+      213: 477801835497005926
+    second: glitter_animation_41
+  - first:
+      213: 5982084647626591538
+    second: glitter_animation_42
+  - first:
+      213: 1685827362051100630
+    second: glitter_animation_43
+  - first:
+      213: 8006310410794065301
+    second: glitter_animation_44
+  - first:
+      213: -8649084585830512864
+    second: glitter_animation_45
+  - first:
+      213: -2672671663557062241
+    second: glitter_animation_46
+  - first:
+      213: -9156946412121438528
+    second: glitter_animation_47
+  - first:
+      213: 6530156842642971917
+    second: glitter_animation_48
+  - first:
+      213: 157201295819252766
+    second: glitter_animation_49
+  - first:
+      213: 5274885755785133711
+    second: glitter_animation_50
+  - first:
+      213: -5268616791613269725
+    second: glitter_animation_51
+  - first:
+      213: 706135255049823901
+    second: glitter_animation_52
+  - first:
+      213: 2744357717284339867
+    second: glitter_animation_53
+  - first:
+      213: -2301081405607389229
+    second: glitter_animation_54
+  - first:
+      213: 2906590504273784694
+    second: glitter_animation_55
+  - first:
+      213: -2455961344837479156
+    second: glitter_animation_56
+  - first:
+      213: 901516525526458393
+    second: glitter_animation_57
+  - first:
+      213: 2614172698875971809
+    second: glitter_animation_58
+  - first:
+      213: 673899966527308375
+    second: glitter_animation_59
+  - first:
+      213: 8941574172605097797
+    second: glitter_animation_60
+  - first:
+      213: -7529645430222140566
+    second: glitter_animation_61
+  - first:
+      213: -2513303601259530822
+    second: glitter_animation_62
+  - first:
+      213: 6267593822896215318
+    second: glitter_animation_63
+  - first:
+      213: -7302993290949697198
+    second: glitter_animation_64
+  - first:
+      213: -5285901146532259857
+    second: glitter_animation_65
+  - first:
+      213: 5964213921544563558
+    second: glitter_animation_66
+  - first:
+      213: -4586869455532371008
+    second: glitter_animation_67
+  - first:
+      213: 1224604633721132046
+    second: glitter_animation_68
+  - first:
+      213: 3515437366440856561
+    second: glitter_animation_69
+  - first:
+      213: -8731167690826577592
+    second: glitter_animation_70
+  - first:
+      213: 827846221058222114
+    second: glitter_animation_71
+  - first:
+      213: 8103834110718269279
+    second: glitter_animation_72
+  - first:
+      213: 8999129993216176695
+    second: glitter_animation_73
+  - first:
+      213: 9212748222723030142
+    second: glitter_animation_74
+  - first:
+      213: 2072105967216994262
+    second: glitter_animation_75
+  - first:
+      213: -7547618796466809409
+    second: glitter_animation_76
+  - first:
+      213: 1140957979100256011
+    second: glitter_animation_77
+  - first:
+      213: -836680420338400811
+    second: glitter_animation_78
+  - first:
+      213: -5595653705730121216
+    second: glitter_animation_79
+  - first:
+      213: 8207731763442944681
+    second: glitter_animation_80
+  - first:
+      213: 6277660847024567345
+    second: glitter_animation_81
+  - first:
+      213: 2527599567029753100
+    second: glitter_animation_82
+  - first:
+      213: 8509139470806883998
+    second: glitter_animation_83
+  - first:
+      213: 7601674423481215585
+    second: glitter_animation_84
+  - first:
+      213: 1108628323711854685
+    second: glitter_animation_85
+  - first:
+      213: -3887373969317752551
+    second: glitter_animation_86
+  - first:
+      213: 6912176942627277945
+    second: glitter_animation_87
+  - first:
+      213: 2442074849079242046
+    second: glitter_animation_88
+  - first:
+      213: 4101307786032530273
+    second: glitter_animation_89
+  - first:
+      213: -7568771097471964195
+    second: glitter_animation_90
+  - first:
+      213: -4215210848496805198
+    second: glitter_animation_91
+  - first:
+      213: 6524505983500992460
+    second: glitter_animation_92
+  - first:
+      213: 1750963165895344594
+    second: glitter_animation_93
+  - first:
+      213: -8785916576838547791
+    second: glitter_animation_94
+  - first:
+      213: 4953916125427271788
+    second: glitter_animation_95
+  - first:
+      213: 6060462858104512026
+    second: glitter_animation_96
+  - first:
+      213: 63276753446180394
+    second: glitter_animation_97
+  - first:
+      213: 4452516331238622343
+    second: glitter_animation_98
+  - first:
+      213: -5314712243625453886
+    second: glitter_animation_99
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: glitter_animation_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8192
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7add0a92943e864b0800000000000000
+      internalID: -5446853845934088793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 8192
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bc5819c8521a3b00800000000000000
+      internalID: 808979255606664374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 8192
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd63b0e81ea78e2b0800000000000000
+      internalID: -5555055031192176929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 8192
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e6287dd6df988a30800000000000000
+      internalID: 4217796796219926242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 8192
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ea5182d5aa7d79b0800000000000000
+      internalID: -5080769951984166176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 8192
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84d61f8c79b57eda0800000000000000
+      internalID: -5915658878058402488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7680
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b565805754f666b00800000000000000
+      internalID: 821466326148601435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_7
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 7680
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79b94b340dda8dae0800000000000000
+      internalID: -1524277363864200297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 7680
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7209837ee7ba2d20800000000000000
+      internalID: 3254615915497063035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_9
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 7680
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71dc3cef8f80c8720800000000000000
+      internalID: 2849662529737837847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_10
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 7680
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2efbe335c99fccb40800000000000000
+      internalID: 5462014897900404706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_11
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 7680
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e1d59d6163c79b70800000000000000
+      internalID: 8905801611366224356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7168
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4acf0659aad7bb940800000000000000
+      internalID: 5312978357017705636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_13
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 7168
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f90c18d0d56c377f0800000000000000
+      internalID: -615930621058760545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_14
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 7168
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef67fff1dc37e9c00800000000000000
+      internalID: 909291499617744638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_15
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 7168
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74f247141e02da930800000000000000
+      internalID: 4156014182970699591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_16
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 7168
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f58cc2ebd874d6a50800000000000000
+      internalID: 6515942909981542495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_17
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 7168
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6b054f78de6aff10800000000000000
+      internalID: 2304276035480652653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6656
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5767710412dd8c740800000000000000
+      internalID: 5172627306913953397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_19
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 6656
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4330045cde7865d30800000000000000
+      internalID: 4419869539597026100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_20
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 6656
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adb8af1f4d1944ab0800000000000000
+      internalID: -5024730940459807782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_21
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 6656
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b31214bc50e0f61a0800000000000000
+      internalID: -6814212293140602565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_22
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 6656
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c7d6e4b374e00a40800000000000000
+      internalID: 5332513144414066626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_23
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 6656
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54654686d5bb326c0800000000000000
+      internalID: -4169282820157188539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6144
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdc6695cb3f1ba170800000000000000
+      internalID: 8190674688881880287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_25
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 6144
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3ac977274f316100800000000000000
+      internalID: 99430241616382524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_26
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 6144
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e1bbf358f17254c0800000000000000
+      internalID: -4300249382810570266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_27
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 6144
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f162b0702d1122cb0800000000000000
+      internalID: -4890326651611961825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_28
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 6144
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07a7b3f14c7c371d0800000000000000
+      internalID: -3354117652309378448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_29
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 6144
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d517576f59db6f60800000000000000
+      internalID: 8028749764496922064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5632
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 982dc01eeffa8f260800000000000000
+      internalID: 7131643519173448329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_31
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 5632
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 537fe4ff35a1760d0800000000000000
+      internalID: -3429743643151370443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_32
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 5632
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 207ba7b77b4fc8290800000000000000
+      internalID: -7886659778544748798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_33
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 5632
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17c729c387b449f50800000000000000
+      internalID: 6887212709940722801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_34
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 5632
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f702399d88a847d0800000000000000
+      internalID: -2933909831117830153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_35
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 5632
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70b5cb81446d7b3e0800000000000000
+      internalID: -2037924718400742649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5120
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df5cd699f1952cc90800000000000000
+      internalID: -7151055266057959939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_37
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 5120
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 159e4cc6fee482b20800000000000000
+      internalID: 3109822332928321873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_38
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 5120
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1adab577ff36378b0800000000000000
+      internalID: -5155667199538778719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_39
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 5120
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fff0d531450f7900800000000000000
+      internalID: 684271446017507314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_40
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 5120
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a9c055a9a5b80700800000000000000
+      internalID: 506854698306816420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_41
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 5120
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66324d5ec3e71a600800000000000000
+      internalID: 477801835497005926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4608
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23dc916ea42a40350800000000000000
+      internalID: 5982084647626591538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_43
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 4608
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6df80bbcd03456710800000000000000
+      internalID: 1685827362051100630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_44
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 4608
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59d54ec36e02c1f60800000000000000
+      internalID: 8006310410794065301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_45
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 4608
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 027044dd46748f780800000000000000
+      internalID: -8649084585830512864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_46
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 4608
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f91dd6c4843c8ead0800000000000000
+      internalID: -2672671663557062241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_47
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 4608
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c6c636f0cdfbe080800000000000000
+      internalID: -9156946412121438528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4096
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0d1255dc07cf9a50800000000000000
+      internalID: 6530156842642971917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_49
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 4096
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e14a983eebd7e2200800000000000000
+      internalID: 157201295819252766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_50
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 4096
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8e3758b5a8243940800000000000000
+      internalID: 5274885755785133711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_51
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 4096
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3299b3e31fc12e6b0800000000000000
+      internalID: -5268616791613269725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_52
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 4096
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d96ef90f542bcc900800000000000000
+      internalID: 706135255049823901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_53
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 4096
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b90c55bbdcae51620800000000000000
+      internalID: 2744357717284339867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3584
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d7d38b37aae010e0800000000000000
+      internalID: -2301081405607389229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_55
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 3584
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67f23c2f9a8465820800000000000000
+      internalID: 2906590504273784694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_56
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 3584
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c051fda4b2caaedd0800000000000000
+      internalID: -2455961344837479156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_57
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 3584
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9102627e084d28c00800000000000000
+      internalID: 901516525526458393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_58
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 3584
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e8c60a1838674420800000000000000
+      internalID: 2614172698875971809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_59
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 3584
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7520207f27c2a5900800000000000000
+      internalID: 673899966527308375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3072
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5472fe2e55ad61c70800000000000000
+      internalID: 8941574172605097797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_61
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 3072
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6b47feff53518790800000000000000
+      internalID: -7529645430222140566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_62
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 3072
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab53732d0b3fe1dd0800000000000000
+      internalID: -2513303601259530822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_63
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 3072
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6155922ff57faf650800000000000000
+      internalID: 6267593822896215318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_64
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 3072
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 251e1e77b4e86aa90800000000000000
+      internalID: -7302993290949697198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_65
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 3072
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe75d13c9e4b4a6b0800000000000000
+      internalID: -5285901146532259857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_66
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2560
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66b6a1e36f425c250800000000000000
+      internalID: 5964213921544563558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_67
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 2560
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c357ef488a2850c0800000000000000
+      internalID: -4586869455532371008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_68
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 2560
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e04de371d6baef010800000000000000
+      internalID: 1224604633721132046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_69
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 2560
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fb87d0c8a759c030800000000000000
+      internalID: 3515437366440856561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_70
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2560
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8490ae1be39a4d680800000000000000
+      internalID: -8731167690826577592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_71
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 2560
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22823de70c91d7b00800000000000000
+      internalID: 827846221058222114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2048
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f575e00103a967070800000000000000
+      internalID: 8103834110718269279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_73
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 2048
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 732b635ac0553ec70800000000000000
+      internalID: 8999129993216176695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_74
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 2048
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7c748482b14adf70800000000000000
+      internalID: 9212748222723030142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_75
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 2048
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d7afe0166991cc10800000000000000
+      internalID: 2072105967216994262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_76
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2048
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb5d88091b8714790800000000000000
+      internalID: -7547618796466809409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_77
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 2048
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b071be7ac3f75df00800000000000000
+      internalID: 1140957979100256011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_78
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d1843337938364f0800000000000000
+      internalID: -836680420338400811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_79
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1536
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 002abd70a9e3852b0800000000000000
+      internalID: -5595653705730121216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_80
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1536
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aa05bb6d88b7e170800000000000000
+      internalID: 8207731763442944681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_81
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1536
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 134f647a74bbe1750800000000000000
+      internalID: 6277660847024567345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_82
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1536
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c055d371a66d31320800000000000000
+      internalID: 2527599567029753100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_83
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1536
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9e13bde349861670800000000000000
+      internalID: 8509139470806883998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16a25cddc929e7960800000000000000
+      internalID: 7601674423481215585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_85
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1024
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5828ce2693a26f00800000000000000
+      internalID: 1108628323711854685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_86
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1024
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91117b998f54d0ac0800000000000000
+      internalID: -3887373969317752551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_87
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1024
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97cc1f99e4cfcef50800000000000000
+      internalID: 6912176942627277945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_88
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1024
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3da846f22ef3e120800000000000000
+      internalID: 2442074849079242046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_89
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1024
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1634305a3b5cae830800000000000000
+      internalID: 4101307786032530273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddba0f4b9c256f690800000000000000
+      internalID: -7568771097471964195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_91
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 512
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ba99f101109085c0800000000000000
+      internalID: -4215210848496805198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_92
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccfbc79af93bb8a50800000000000000
+      internalID: 6524505983500992460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_93
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 512
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d14cfde8bbac4810800000000000000
+      internalID: 1750963165895344594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_94
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b682535c67221680800000000000000
+      internalID: -8785916576838547791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_95
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 512
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c680c271878dfb440800000000000000
+      internalID: 4953916125427271788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_96
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1e94c71cd61b1450800000000000000
+      internalID: 6060462858104512026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_97
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2613bb3fddc0e000800000000000000
+      internalID: 63276753446180394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_98
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7848a1843048acd30800000000000000
+      internalID: 4452516331238622343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glitter_animation_99
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c6194b7f595e36b0800000000000000
+      internalID: -5314712243625453886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      glitter_animation_24: 8190674688881880287
+      glitter_animation_69: 3515437366440856561
+      glitter_animation_12: 5312978357017705636
+      glitter_animation_54: -2301081405607389229
+      glitter_animation_97: 63276753446180394
+      glitter_animation_42: 5982084647626591538
+      glitter_animation_9: 2849662529737837847
+      glitter_animation_84: 7601674423481215585
+      glitter_animation_37: 3109822332928321873
+      glitter_animation_0: -5446853845934088793
+      glitter_animation_59: 673899966527308375
+      glitter_animation_78: -836680420338400811
+      glitter_animation_62: -2513303601259530822
+      glitter_animation_13: -615930621058760545
+      glitter_animation_68: 1224604633721132046
+      glitter_animation_87: 6912176942627277945
+      glitter_animation_23: -4169282820157188539
+      glitter_animation_82: 2527599567029753100
+      glitter_animation_67: -4586869455532371008
+      glitter_animation_32: -7886659778544748798
+      glitter_animation_27: -4890326651611961825
+      glitter_animation_75: 2072105967216994262
+      glitter_animation_35: -2037924718400742649
+      glitter_animation_28: -3354117652309378448
+      glitter_animation_99: -5314712243625453886
+      glitter_animation_70: -8731167690826577592
+      glitter_animation_18: 5172627306913953397
+      glitter_animation_6: 821466326148601435
+      glitter_animation_92: 6524505983500992460
+      glitter_animation_7: -1524277363864200297
+      glitter_animation_71: 827846221058222114
+      glitter_animation_73: 8999129993216176695
+      glitter_animation_34: -2933909831117830153
+      glitter_animation_14: 909291499617744638
+      glitter_animation_22: 5332513144414066626
+      glitter_animation_4: -5080769951984166176
+      glitter_animation_80: 8207731763442944681
+      glitter_animation_3: 4217796796219926242
+      glitter_animation_25: 99430241616382524
+      glitter_animation_89: 4101307786032530273
+      glitter_animation_26: -4300249382810570266
+      glitter_animation_49: 157201295819252766
+      glitter_animation_96: 6060462858104512026
+      glitter_animation_74: 9212748222723030142
+      glitter_animation_11: 8905801611366224356
+      glitter_animation_58: 2614172698875971809
+      glitter_animation_41: 477801835497005926
+      glitter_animation_15: 4156014182970699591
+      glitter_animation_51: -5268616791613269725
+      glitter_animation_40: 506854698306816420
+      glitter_animation_31: -3429743643151370443
+      glitter_animation_47: -9156946412121438528
+      glitter_animation_66: 5964213921544563558
+      glitter_animation_64: -7302993290949697198
+      glitter_animation_91: -4215210848496805198
+      glitter_animation_85: 1108628323711854685
+      glitter_animation_88: 2442074849079242046
+      glitter_animation_90: -7568771097471964195
+      glitter_animation_39: 684271446017507314
+      glitter_animation_55: 2906590504273784694
+      glitter_animation_52: 706135255049823901
+      glitter_animation_10: 5462014897900404706
+      glitter_animation_43: 1685827362051100630
+      glitter_animation_17: 2304276035480652653
+      glitter_animation_38: -5155667199538778719
+      glitter_animation_77: 1140957979100256011
+      glitter_animation_95: 4953916125427271788
+      glitter_animation_8: 3254615915497063035
+      glitter_animation_36: -7151055266057959939
+      glitter_animation_45: -8649084585830512864
+      glitter_animation_33: 6887212709940722801
+      glitter_animation_2: -5555055031192176929
+      glitter_animation_81: 6277660847024567345
+      glitter_animation_30: 7131643519173448329
+      glitter_animation_56: -2455961344837479156
+      glitter_animation_44: 8006310410794065301
+      glitter_animation_57: 901516525526458393
+      glitter_animation_16: 6515942909981542495
+      glitter_animation_29: 8028749764496922064
+      glitter_animation_61: -7529645430222140566
+      glitter_animation_63: 6267593822896215318
+      glitter_animation_21: -6814212293140602565
+      glitter_animation_83: 8509139470806883998
+      glitter_animation_98: 4452516331238622343
+      glitter_animation_53: 2744357717284339867
+      glitter_animation_65: -5285901146532259857
+      glitter_animation_19: 4419869539597026100
+      glitter_animation_60: 8941574172605097797
+      glitter_animation_93: 1750963165895344594
+      glitter_animation_1: 808979255606664374
+      glitter_animation_20: -5024730940459807782
+      glitter_animation_46: -2672671663557062241
+      glitter_animation_72: 8103834110718269279
+      glitter_animation_48: 6530156842642971917
+      glitter_animation_50: 5274885755785133711
+      glitter_animation_76: -7547618796466809409
+      glitter_animation_5: -5915658878058402488
+      glitter_animation_94: -8785916576838547791
+      glitter_animation_86: -3887373969317752551
+      glitter_animation_79: -5595653705730121216
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

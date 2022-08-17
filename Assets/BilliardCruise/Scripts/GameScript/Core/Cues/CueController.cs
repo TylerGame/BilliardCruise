@@ -1,7 +1,9 @@
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Networking;
 
 
@@ -14,6 +16,7 @@ namespace BilliardCruise.Sava.Scripts
         [SerializeField] protected SpriteRenderer cueSpriteRenderer;
         [SerializeField] protected SpriteMask cueMask;
         [SerializeField] protected SpriteRenderer hitCueSpriteRenderer;
+        [SerializeField] protected SpriteRenderer fireSpriteRenderer;
         public float disabledOpacity = 0.6f;
         [SerializeField] protected float offsetFromCueBall = 0.7f;
         [SerializeField] protected GameObject guideLinePrefab;
@@ -111,6 +114,7 @@ namespace BilliardCruise.Sava.Scripts
             cueBallRB = cueBall.GetComponent<Rigidbody>();
             guideLine.HideGuideLine();
             HideIndicators();
+            HideFireball();
         }
 
         Vector3 targetpos = Vector3.zero;
@@ -125,7 +129,10 @@ namespace BilliardCruise.Sava.Scripts
         float hitCharge = 0f;
         protected virtual void Update()
         {
-            if (inputManager.State == InputManager.TouchState.START)
+
+#if UNITY_EDITOR || UNITY_STANDALONE || UNITY_WEBPLAYER
+
+            if (inputManager.State == InputManager.TouchState.START && Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
             {
                 initialTouchPos = inputManager.TouchPosition;
                 //deltaAngle = Mathf.Atan(initialTouchPos.y / initialTouchPos.x);
@@ -137,7 +144,7 @@ namespace BilliardCruise.Sava.Scripts
                 isDrawableGuideLine = true;
                 ShowIndicators();
             }
-            else if (inputManager.State == InputManager.TouchState.STAY)
+            else if (inputManager.State == InputManager.TouchState.STAY && isDrawableGuideLine)
             {
                 initialTouchPos = Camera.main.ScreenToWorldPoint(new Vector3(inputManager.TouchPosition.x,
                     inputManager.TouchPosition.y, Camera.main.transform.position.y -
@@ -162,15 +169,32 @@ namespace BilliardCruise.Sava.Scripts
                         cueMask.transform.localScale = Vector3.one * 0.5f * (1f + hitCharge);
                         hitCueSpriteRenderer.transform.localPosition = Vector3.back * hitCharge;
                     }
+                    else
+                    {
+                        target_vetor = (cueBall.transform.position - new Vector3(initialTouchPos.x, cueBall.transform.position.y, initialTouchPos.z));
+                        _lookRotation = Quaternion.LookRotation(target_vetor);
+                        transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * cueRotationSpeed);
+                        if (Vector3.Distance(initialTouchPos, cueBall.transform.position) < Vector3.Distance(start_pos, cueBall.transform.position))
+                        {
+                            hitCharge -= MathF.Abs(Vector3.Distance(initialTouchPos, cueBall.transform.position) - Vector3.Distance(start_pos, cueBall.transform.position)) / 3f;
+                        }
+                        else
+                        {
+                            hitCharge += MathF.Abs(Vector3.Distance(initialTouchPos, cueBall.transform.position) - Vector3.Distance(start_pos, cueBall.transform.position)) / 3f;
+                        }
+                        hitCharge = Mathf.Lerp(0f, 1f, hitCharge);
+                        cueMask.transform.localScale = Vector3.one * 0.5f * (1f + hitCharge);
+                        hitCueSpriteRenderer.transform.localPosition = Vector3.back * hitCharge;
+                    }
+
                     start_pos = initialTouchPos;
                 }
                 else
                 {
-                    hitCharge = 1f;
-                    cueMask.transform.localScale = Vector3.one;
-                    hitCueSpriteRenderer.transform.localPosition = Vector3.zero;
+                    // hitCharge = 0f;
+                    // cueMask.transform.localScale = Vector3.one * 0.5f;
+                    // hitCueSpriteRenderer.transform.localPosition = Vector3.zero;
                 }
-
             }
             else if (inputManager.State == InputManager.TouchState.END)
             {
@@ -183,11 +207,12 @@ namespace BilliardCruise.Sava.Scripts
                     strength = 1f;
                 if (isDrawableGuideLine)
                 {
-                    HitCueBall(strength);
-                    if (strength != 0f)
+                    if (strength > 0.05f)
                     {
+                        HitCueBall(strength);
                         GameManager.Instance.UpdateMoves();
                     }
+
                     HideIndicators();
                 }
                 isDrawableGuideLine = false;
@@ -203,18 +228,137 @@ namespace BilliardCruise.Sava.Scripts
                 guideLine.HideGuideLine();
             }
             SetCuePosition();
+
+
+#elif UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_IPHONE
+
+	for(int i = 0; i < Input.touchCount; i++) {
+            Touch touch = Input.GetTouch(i);
+
+            if (inputManager.State == InputManager.TouchState.START && touch.phase == TouchPhase.Began && !EventSystem.current.IsPointerOverGameObject(touch.fingerId))
+            {
+                initialTouchPos = inputManager.TouchPosition;
+                //deltaAngle = Mathf.Atan(initialTouchPos.y / initialTouchPos.x);
+                initialTouchPos = Camera.main.ScreenToWorldPoint(new Vector3(inputManager.TouchPosition.x,
+                    inputManager.TouchPosition.y, Camera.main.transform.position.y -
+                    cueBall.transform.position.y));
+                start_pos = initialTouchPos;
+                target_vetor = (new Vector3(initialTouchPos.x, cueBall.transform.position.y, initialTouchPos.z) - cueBall.transform.position);
+                isDrawableGuideLine = true;
+                ShowIndicators();
+            }
+            else if (inputManager.State == InputManager.TouchState.STAY && isDrawableGuideLine)
+            {
+                initialTouchPos = Camera.main.ScreenToWorldPoint(new Vector3(inputManager.TouchPosition.x,
+                    inputManager.TouchPosition.y, Camera.main.transform.position.y -
+                    cueBall.transform.position.y));
+                if (!poolManager.IsCueBallSelected(initialTouchPos))
+                {
+                    delta_angle = Vector3.Angle((initialTouchPos - cueBall.transform.position), target_vetor);
+                    if (delta_angle < 60f)
+                    {
+                        target_vetor = (new Vector3(initialTouchPos.x, cueBall.transform.position.y, initialTouchPos.z) - cueBall.transform.position);
+                        _lookRotation = Quaternion.LookRotation(target_vetor);
+                        transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * cueRotationSpeed);
+                        if (Vector3.Distance(initialTouchPos, cueBall.transform.position) > Vector3.Distance(start_pos, cueBall.transform.position))
+                        {
+                            hitCharge -= MathF.Abs(Vector3.Distance(initialTouchPos, cueBall.transform.position) - Vector3.Distance(start_pos, cueBall.transform.position)) / 3f;
+                        }
+                        else
+                        {
+                            hitCharge += MathF.Abs(Vector3.Distance(initialTouchPos, cueBall.transform.position) - Vector3.Distance(start_pos, cueBall.transform.position)) / 3f;
+                        }
+                        hitCharge = Mathf.Lerp(0f, 1f, hitCharge);
+                        cueMask.transform.localScale = Vector3.one * 0.5f * (1f + hitCharge);
+                        hitCueSpriteRenderer.transform.localPosition = Vector3.back * hitCharge;
+                    }
+                    else
+                    {
+                        target_vetor = (cueBall.transform.position - new Vector3(initialTouchPos.x, cueBall.transform.position.y, initialTouchPos.z));
+                        _lookRotation = Quaternion.LookRotation(target_vetor);
+                        transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * cueRotationSpeed);
+                        if (Vector3.Distance(initialTouchPos, cueBall.transform.position) < Vector3.Distance(start_pos, cueBall.transform.position))
+                        {
+                            hitCharge -= MathF.Abs(Vector3.Distance(initialTouchPos, cueBall.transform.position) - Vector3.Distance(start_pos, cueBall.transform.position)) / 3f;
+                        }
+                        else
+                        {
+                            hitCharge += MathF.Abs(Vector3.Distance(initialTouchPos, cueBall.transform.position) - Vector3.Distance(start_pos, cueBall.transform.position)) / 3f;
+                        }
+                        hitCharge = Mathf.Lerp(0f, 1f, hitCharge);
+                        cueMask.transform.localScale = Vector3.one * 0.5f * (1f + hitCharge);
+                        hitCueSpriteRenderer.transform.localPosition = Vector3.back * hitCharge;
+                    }
+
+                    start_pos = initialTouchPos;
+                }
+                else
+                {
+                    // hitCharge = 0f;
+                    // cueMask.transform.localScale = Vector3.one * 0.5f;
+                    // hitCueSpriteRenderer.transform.localPosition = Vector3.zero;
+                }
+            }
+            else if (inputManager.State == InputManager.TouchState.END)
+            {
+                cueMask.transform.localScale = Vector3.one * 0.5f;
+                hitCueSpriteRenderer.transform.localPosition = Vector3.zero;
+                float strength = hitCharge;
+                if (poolManager.IsCueBallSelected(initialTouchPos))
+                    strength = 1f;
+                else if (Vector3.Dot(castDirection, initialTouchPos - cueBall.transform.position) < 0)
+                    strength = 1f;
+                if (isDrawableGuideLine)
+                {
+                    if (strength > 0.05f)
+                    {
+                        HitCueBall(strength);
+                        GameManager.Instance.UpdateMoves();
+                    }
+
+                    HideIndicators();
+                }
+                isDrawableGuideLine = false;
+                hitCharge = 0f;
+            }
+
+            if (isDrawableGuideLine)
+            {
+                DrawGuideLine();
+            }
+            else
+            {
+                guideLine.HideGuideLine();
+            }
+            SetCuePosition();
+    }
+#endif
         }
 
         protected virtual void HideIndicators()
         {
             cueSpriteRenderer.enabled = false;
             hitCueSpriteRenderer.enabled = false;
+
         }
 
         protected virtual void ShowIndicators()
         {
             cueSpriteRenderer.enabled = true;
             hitCueSpriteRenderer.enabled = true;
+        }
+
+        protected virtual void HideFireball()
+        {
+            fireSpriteRenderer.enabled = false;
+            HideIndicators();
+
+        }
+
+        protected virtual void ShowFireball()
+        {
+            fireSpriteRenderer.enabled = true;
+            HideIndicators();
         }
 
         // protected virtual float getAppliedSign(Vector3 from, Vector3 to)
@@ -323,7 +467,7 @@ namespace BilliardCruise.Sava.Scripts
             Vector3 angularVelocity = new Vector3(verticalSpin.x, horizontalSpin.y, verticalSpin.z);
 
             HitCueBall(force, angularVelocity);
-
+            GameManager.Instance.isMoving = true;
             owner.EndTurn(false);
         }
 
@@ -363,7 +507,8 @@ namespace BilliardCruise.Sava.Scripts
 
                 Vector3 collisionCentroid = cueBall.transform.position + (castDirection.normalized * hit.distance);
 
-                guideLine.DrawLineMain(cueBall.transform.position, collisionCentroid + castDirection.normalized * 5f);
+                guideLine.DrawLineMain(cueBall.transform.position, collisionCentroid);
+                // guideLine.DrawLineMain(cueBall.transform.position, collisionCentroid + castDirection.normalized * 5f);
 
                 //   guideLine.DrawDottedLine(cueBall.transform.position, collisionCentroid);
 
@@ -499,6 +644,22 @@ namespace BilliardCruise.Sava.Scripts
             cueBallRB.AddForce(force, ForceMode.VelocityChange);
             cueBallRB.angularVelocity = angularVelocity;
 
+            // if (GameManager.Instance.isTriggerArrowEffect)
+            // {
+
+            // }
+            // else if (GameManager.Instance.isTriggerDiceEffect)
+            // {
+
+            // }
+            // else if (GameManager.Instance.isTriggerEyeEffect)
+            // {
+
+            // }
+            // else if (GameManager.Instance.isTriggerStrengthEffect)
+            // {
+
+            // }
             PlayHitSound();
         }
 

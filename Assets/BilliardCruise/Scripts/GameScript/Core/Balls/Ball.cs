@@ -29,6 +29,10 @@ namespace BilliardCruise.Sava.Scripts
 
         protected BallCollector ballCollector;
 
+        public BoosterEffectManager boosterEffectManager;
+        public GameObject prefabOfBoosterEffect;
+        public GameObject prefabOfUtilsforEffects;
+
         public float Radius
         {
             get;
@@ -40,6 +44,24 @@ namespace BilliardCruise.Sava.Scripts
             get
             {
                 return ballNumber;
+            }
+
+            set
+            {
+                ballNumber = value;
+            }
+        }
+
+
+        public Texture BallTexture
+        {
+            get
+            {
+                return ballTexture;
+            }
+            set
+            {
+                ballTexture = value;
             }
         }
 
@@ -103,6 +125,18 @@ namespace BilliardCruise.Sava.Scripts
             Radius = GetComponent<Collider>().bounds.size.x / 2.0f;
 
             ballCollector = GameObject.FindObjectOfType<BallCollector>();
+
+
+
+
+        }
+
+
+        protected virtual void Start()
+        {
+            GameObject obj = Instantiate(prefabOfBoosterEffect);
+            boosterEffectManager = obj.GetComponent<BoosterEffectManager>();
+            boosterEffectManager.owner = gameObject;
         }
 
         protected virtual void Update()
@@ -117,11 +151,32 @@ namespace BilliardCruise.Sava.Scripts
             if (rb.velocity.magnitude <= stopThreshold)
             {
                 rb.velocity = Vector3.zero;
+
             }
 
             if (rb.angularVelocity.magnitude <= stopThresholdAngular)
             {
                 rb.angularVelocity = Vector3.zero;
+            }
+
+            if (!boosterEffectManager.isState && !IsAtRest)
+            {
+                if (GameManager.Instance.isTriggerArrowEffect)
+                {
+
+                }
+                if (GameManager.Instance.isTriggerDiceEffect)
+                {
+
+                }
+                if (GameManager.Instance.isTriggerEyeEffect)
+                {
+                    boosterEffectManager.SwitchInvisibleEffect(true);
+                }
+                if (GameManager.Instance.isTriggerStrengthEffect)
+                {
+                    boosterEffectManager.SwitchStrengthEffect(true);
+                }
             }
         }
 
@@ -141,12 +196,17 @@ namespace BilliardCruise.Sava.Scripts
                         poolManager.CurrentTurn.BallsHitRailsAfterContact = true;
                     }
                 }
+
+                if (col.collider.CompareTag("Monster") && GameManager.Instance.isTriggerStrengthEffect)
+                {
+                    GameObject uEffects = Instantiate(prefabOfUtilsforEffects, col.collider.gameObject.transform.position, Quaternion.Euler(90f, 0f, 0f));
+                    uEffects.GetComponent<UtilsForEffects>().UseCrackEffect();
+                }
             }
 
             if (col.collider.CompareTag("Ball"))
             {
                 PlayBallCollisionSound();
-
                 if (isServer)
                 {
                     if (BallNumber == 0)
@@ -166,17 +226,62 @@ namespace BilliardCruise.Sava.Scripts
 
         protected void HandleTriggerEnter(Collider col, bool isServer)
         {
+
             if (col.CompareTag("Pocket"))
             {
                 Pocket pocket = col.GetComponent<Pocket>();
                 PlayPocketSound();
+                pocket.CoverPocketWithCork();
 
                 if (isServer)
                 {
                     poolManager.CurrentTurn.AddToPocketedBalls(this);
+                    boosterEffectManager.SwitchInvisibleEffect(false);
+                    boosterEffectManager.SwitchStrengthEffect(false);
                     StartCoroutine(PocketCo(pocket));
                 }
             }
+            else if (col.CompareTag("BottleNeck"))
+            {
+                Vector3 targetPos = col.gameObject.transform.parent.position;
+                GetComponent<Rigidbody>().velocity = Vector3.zero;
+                GetComponent<Rigidbody>().isKinematic = true;
+                GetComponent<Collider>().enabled = false;
+
+                col.gameObject.transform.parent.GetComponent<Monster>().ballIn = gameObject;
+                StartCoroutine(iBottleNeckCo(col.gameObject));
+            }
+        }
+
+        IEnumerator iBottleNeckCo(GameObject tar)
+        {
+            yield return null;
+            Debug.Log(tar.name);
+            tar.GetComponent<Collider>().enabled = false;
+            tar.transform.parent.gameObject.GetComponent<Collider>().enabled = false;
+            yield return new WaitForEndOfFrame();
+            transform.position = new Vector3(tar.transform.parent.position.x, transform.position.y, tar.transform.parent.position.z);
+
+
+            if (BallNumber == 0)
+            {
+                transform.position = new Vector3(1000, 1000, 1000);
+                rb.velocity = Vector3.zero;
+                rb.angularVelocity = Vector3.zero;
+                transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+                // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                GameUI.Instance.ShowLoosePopup();
+                yield break;
+            }
+
+            tar.GetComponent<Collider>().enabled = true;
+            tar.transform.parent.gameObject.GetComponent<Collider>().enabled = true;
+            // while (Vector3.Distance(transform.position, tar.transform.position) > 0.001f)
+            // {
+            //     Vector3.MoveTowards(transform.position, tar.transform.position, Time.deltaTime);
+            //     yield return null;
+            // }
+
         }
 
         public override string ToString()
@@ -192,11 +297,22 @@ namespace BilliardCruise.Sava.Scripts
 
         protected IEnumerator PocketCo(Pocket pocket)
         {
-            // SetLayer(0);
+            SetLayer(0);
+            GetComponent<SphereCollider>().enabled = false;
             SetGravity(false);
             float speed = rb.velocity.magnitude;
             Stop();
             yield return null;
+            // transform.position = pocket.transform.world;
+            // while (transform.localScale.x > 0.2f)
+            // {
+            //     // Vector3 direction = (currentNode.position - transform.position).normalized;
+            //     // rb.velocity = direction * pocket.ballVelInPocket;
+            //     // rb.angularVelocity = rb.angularVelocity.normalized * pocket.ballAngVelInPocket;
+            //     transform.localScale *= Mathf.Clamp(speed * 30, 0.3f, 0.9f);
+            //     yield return new WaitForSeconds(0.01f);
+            // }
+
 
             for (int i = 0; i < pocket.path.nodes.Count; i++)
             {
@@ -219,12 +335,12 @@ namespace BilliardCruise.Sava.Scripts
                 rb.velocity = Vector3.zero;
                 rb.angularVelocity = Vector3.zero;
                 transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
-
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                GameUI.Instance.ShowLoosePopup();
                 yield break;
             }
 
-            Stop();
+
             // GameManager.RemoveBall(ballNumber);
             // poolManager.UpdateBalls();
             // Destroy(gameObject);

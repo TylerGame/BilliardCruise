@@ -11,6 +11,8 @@ TagManager:
   - Monster
   - UICamera
   - BallCamera
+  - PocketHole
+  - BottleNeck
   layers:
   - Default
   - TransparentFX

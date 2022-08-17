@@ -1,0 +1,1097 @@
+fileFormatVersion: 2
+guid: efe978a5f572c9e4290d3a1c49b87834
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4711166267260236527
+    second: cork_animation_0
+  - first:
+      213: -1584350385311577593
+    second: cork_animation_1
+  - first:
+      213: 8750172318947673668
+    second: cork_animation_2
+  - first:
+      213: -7476170015039580576
+    second: cork_animation_3
+  - first:
+      213: 6119707511398825443
+    second: cork_animation_4
+  - first:
+      213: 4446890776680616276
+    second: cork_animation_5
+  - first:
+      213: -5791571888008132037
+    second: cork_animation_6
+  - first:
+      213: -690823625079593653
+    second: cork_animation_7
+  - first:
+      213: -8162442378482278333
+    second: cork_animation_8
+  - first:
+      213: -5466858760517530970
+    second: cork_animation_9
+  - first:
+      213: -1369883687399123495
+    second: cork_animation_10
+  - first:
+      213: -431593321444182291
+    second: cork_animation_11
+  - first:
+      213: -6565349828129045585
+    second: cork_animation_12
+  - first:
+      213: -5263438669959926908
+    second: cork_animation_13
+  - first:
+      213: 2661253612405023948
+    second: cork_animation_14
+  - first:
+      213: 2186881842157996229
+    second: cork_animation_15
+  - first:
+      213: 1929800025343494474
+    second: cork_animation_16
+  - first:
+      213: 8648153564547735130
+    second: cork_animation_17
+  - first:
+      213: 7976631048609761146
+    second: cork_animation_18
+  - first:
+      213: -4526539309801843443
+    second: cork_animation_19
+  - first:
+      213: -4293624634034233885
+    second: cork_animation_20
+  - first:
+      213: 1270467891589746636
+    second: cork_animation_21
+  - first:
+      213: 7751293149066661001
+    second: cork_animation_22
+  - first:
+      213: -2543053922089694152
+    second: cork_animation_23
+  - first:
+      213: -4125228554692901830
+    second: cork_animation_24
+  - first:
+      213: -6644796071592746633
+    second: cork_animation_25
+  - first:
+      213: 6443551179642139008
+    second: cork_animation_26
+  - first:
+      213: 4243587020180428239
+    second: cork_animation_27
+  - first:
+      213: -6443445646805426665
+    second: cork_animation_28
+  - first:
+      213: 4041544158244805357
+    second: cork_animation_29
+  - first:
+      213: -711391754197549588
+    second: cork_animation_30
+  - first:
+      213: 7142633957517220889
+    second: cork_animation_31
+  - first:
+      213: 1781565806208078110
+    second: cork_animation_32
+  - first:
+      213: -7631424013974050191
+    second: cork_animation_33
+  - first:
+      213: -1008284539769989318
+    second: cork_animation_34
+  - first:
+      213: -3522947894492085277
+    second: cork_animation_35
+  - first:
+      213: 7238015734163208928
+    second: cork_animation_36
+  - first:
+      213: -7299308969673901943
+    second: cork_animation_37
+  - first:
+      213: 4164852301660447745
+    second: cork_animation_38
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: cork_animation_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1836
+        width: 305
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe279dd52cc616140800000000000000
+      internalID: 4711166267260236527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cork_animation_1
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 1836
+        width: 305
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70a00c308b1430ae0800000000000000
+      internalID: -1584350385311577593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cork_animation_2
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 1836
+        width: 305
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 446055a1d5bde6970800000000000000
+      internalID: 8750172318947673668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cork_animation_3
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 1836
+        width: 305
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06693255bfe4f3890800000000000000
+      internalID: -7476170015039580576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cork_animation_4
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 1836
+        width: 305
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ed773ade819de450800000000000000
+      internalID: 6119707511398825443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cork_animation_5
+      rect:
+        serializedVersion: 2
+        x: 1525
+        y: 1836
+        width: 305
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 451520bc99786bd30800000000000000
+      internalID: 4446890776680616276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cork_animation_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1530
+        width: 305
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3a032c8d0430afa0800000000000000
+      internalID: -5791571888008132037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cork_animation_7
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 1530
+        width: 305
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b45eea8b293b966f0800000000000000
+      internalID: -690823625079593653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cork_animation_8
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 1530
+        width: 305
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34028fa37ed29be80800000000000000
+      internalID: -8162442378482278333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cork_animation_9
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 1530
+        width: 305
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aace160ce0d124b0800000000000000
+      internalID: -5466858760517530970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cork_animation_10
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 1530
+        width: 305
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d519f45b023dfce0800000000000000
+      internalID: -1369883687399123495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cork_animation_11
+      rect:
+        serializedVersion: 2
+        x: 1525
+        y: 1530
+        width: 305
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de673eb292ca20af0800000000000000
+      internalID: -431593321444182291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cork_animation_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1224
+        width: 305
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa34234bd1133e4a0800000000000000
+      internalID: -6565349828129045585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cork_animation_13
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 1224
+        width: 305
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48bebf3aa6284f6b0800000000000000
+      internalID: -5263438669959926908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cork_animation_14
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 1224
+        width: 305
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc460a08f0caee420800000000000000
+      internalID: 2661253612405023948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cork_animation_15
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 1224
+        width: 305
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c84497e27d595e10800000000000000
+      internalID: 2186881842157996229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cork_animation_16
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 1224
+        width: 305
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a49832606e608ca10800000000000000
+      internalID: 1929800025343494474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cork_animation_17
+      rect:
+        serializedVersion: 2
+        x: 1525
+        y: 1224
+        width: 305
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5e55e9d8d9640870800000000000000
+      internalID: 8648153564547735130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cork_animation_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 918
+        width: 305
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a778cbc3dafa2be60800000000000000
+      internalID: 7976631048609761146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cork_animation_19
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 918
+        width: 305
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d055b69fa708e21c0800000000000000
+      internalID: -4526539309801843443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cork_animation_20
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 918
+        width: 305
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3edd589d42bf964c0800000000000000
+      internalID: -4293624634034233885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cork_animation_21
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 918
+        width: 305
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccf0fb0f0db91a110800000000000000
+      internalID: 1270467891589746636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cork_animation_22
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 918
+        width: 305
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98c890c0d00229b60800000000000000
+      internalID: 7751293149066661001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cork_animation_23
+      rect:
+        serializedVersion: 2
+        x: 1525
+        y: 918
+        width: 305
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83c0e297ee145bcd0800000000000000
+      internalID: -2543053922089694152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cork_animation_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 612
+        width: 305
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a344b346c7e30c6c0800000000000000
+      internalID: -4125228554692901830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cork_animation_25
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 612
+        width: 305
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 771adc3bd21f8c3a0800000000000000
+      internalID: -6644796071592746633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cork_animation_26
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 612
+        width: 305
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0817e9298a71c6950800000000000000
+      internalID: 6443551179642139008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cork_animation_27
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 612
+        width: 305
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc5105f49ef34ea30800000000000000
+      internalID: 4243587020180428239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cork_animation_28
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 612
+        width: 305
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71e10a4b2584496a0800000000000000
+      internalID: -6443445646805426665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cork_animation_29
+      rect:
+        serializedVersion: 2
+        x: 1525
+        y: 612
+        width: 305
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dea9c38bff2761830800000000000000
+      internalID: 4041544158244805357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cork_animation_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 306
+        width: 305
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cedb9eaf7f0a026f0800000000000000
+      internalID: -711391754197549588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cork_animation_31
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 306
+        width: 305
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91cd476bdbbbf1360800000000000000
+      internalID: 7142633957517220889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cork_animation_32
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 306
+        width: 305
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e11d30f59a469b810800000000000000
+      internalID: 1781565806208078110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cork_animation_33
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 306
+        width: 305
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17ae0b4da4cb71690800000000000000
+      internalID: -7631424013974050191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cork_animation_34
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 306
+        width: 305
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a37dd7e9d8ad102f0800000000000000
+      internalID: -1008284539769989318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cork_animation_35
+      rect:
+        serializedVersion: 2
+        x: 1525
+        y: 306
+        width: 305
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e3c69a2e89fb1fc0800000000000000
+      internalID: -3522947894492085277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cork_animation_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 305
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ea7c7926f8927460800000000000000
+      internalID: 7238015734163208928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cork_animation_37
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 0
+        width: 305
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 988b3cc5a25a3ba90800000000000000
+      internalID: -7299308969673901943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cork_animation_38
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 0
+        width: 305
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 104607e1a178cc930800000000000000
+      internalID: 4164852301660447745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      cork_animation_19: -4526539309801843443
+      cork_animation_25: -6644796071592746633
+      cork_animation_1: -1584350385311577593
+      cork_animation_14: 2661253612405023948
+      cork_animation_31: 7142633957517220889
+      cork_animation_10: -1369883687399123495
+      cork_animation_21: 1270467891589746636
+      cork_animation_29: 4041544158244805357
+      cork_animation_13: -5263438669959926908
+      cork_animation_37: -7299308969673901943
+      cork_animation_2: 8750172318947673668
+      cork_animation_9: -5466858760517530970
+      cork_animation_23: -2543053922089694152
+      cork_animation_34: -1008284539769989318
+      cork_animation_35: -3522947894492085277
+      cork_animation_20: -4293624634034233885
+      cork_animation_11: -431593321444182291
+      cork_animation_7: -690823625079593653
+      cork_animation_18: 7976631048609761146
+      cork_animation_16: 1929800025343494474
+      cork_animation_3: -7476170015039580576
+      cork_animation_6: -5791571888008132037
+      cork_animation_17: 8648153564547735130
+      cork_animation_38: 4164852301660447745
+      cork_animation_8: -8162442378482278333
+      cork_animation_24: -4125228554692901830
+      cork_animation_12: -6565349828129045585
+      cork_animation_0: 4711166267260236527
+      cork_animation_15: 2186881842157996229
+      cork_animation_27: 4243587020180428239
+      cork_animation_36: 7238015734163208928
+      cork_animation_5: 4446890776680616276
+      cork_animation_32: 1781565806208078110
+      cork_animation_30: -711391754197549588
+      cork_animation_22: 7751293149066661001
+      cork_animation_28: -6443445646805426665
+      cork_animation_33: -7631424013974050191
+      cork_animation_4: 6119707511398825443
+      cork_animation_26: 6443551179642139008
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

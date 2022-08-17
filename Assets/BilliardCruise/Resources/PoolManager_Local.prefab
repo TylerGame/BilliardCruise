@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5902547050705290924
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5902547050705290927}
+  - component: {fileID: 5902547050705290926}
+  m_Layer: 0
+  m_Name: PoolManager_Local
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5902547050705290927
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5902547050705290924}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.34090555, y: 1.1590548, z: 0.7385872}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5902547050705290926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5902547050705290924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 452c68054383496489431cdffe36bf3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  table: {fileID: 0}
+  cueBallPrefab: {fileID: 1919157339863968101, guid: 25850fe453d37e941887e8eb82ff614a, type: 3}
+  ballPrefabs:
+  - {fileID: 1919157339863968101, guid: 68667fb9b63db4042bd226a92ab20b16, type: 3}
+  - {fileID: 1919157339863968101, guid: 952421de403f498449d410ca9317bf22, type: 3}
+  - {fileID: 1919157339863968101, guid: 6ac8974b39a43e84696d49a1ea121a81, type: 3}
+  - {fileID: 1919157339863968101, guid: 74b5eaa1e9a125045ab9880d5a9cda6c, type: 3}
+  - {fileID: 1919157339863968101, guid: 065dd85679e761443816d4f5da7dd515, type: 3}
+  - {fileID: 1919157339863968101, guid: cf2efe6753766fc419e1667d3a30e4f8, type: 3}
+  - {fileID: 1919157339863968101, guid: f40bbd7c6fed55249821b1f2f905ce47, type: 3}
+  - {fileID: 1919157339863968101, guid: fcfcd0e3710c90344a658fb747918a7c, type: 3}
+  - {fileID: 1919157339863968101, guid: bf09ae9c67640cd48b4f6c83f15a7540, type: 3}
+  - {fileID: 1919157339863968101, guid: 711de80c57f2f434f93a4185fb9d81c5, type: 3}
+  - {fileID: 1919157339863968101, guid: 561c3a1250cf6bd4cbb9d6f95d1f2a7a, type: 3}
+  - {fileID: 1919157339863968101, guid: 1fe6fecb39a5935468ec268e932a6a3f, type: 3}
+  - {fileID: 1919157339863968101, guid: ea1b852cac28843498304d77dd6bfdfc, type: 3}
+  - {fileID: 1919157339863968101, guid: 3755d5dfb4fb335459fb8b85f46d508c, type: 3}
+  - {fileID: 1919157339863968101, guid: 66a95529df7ee014daf2030dbe228853, type: 3}
+  ballCollectorPoints: {fileID: 0}
+  gameUI: {fileID: 0}
+  cueBallIndicatorPrefab: {fileID: 7928214467040993819, guid: e3e33896d3b66b24eab52d09ef0bb447, type: 3}
+  ballInHandIndicatorPrefab: {fileID: 7761515241250961465, guid: 9529576c070588c4b967e4587530f327, type: 3}
+  rackSound: {fileID: 8300000, guid: d405a478caf80244b9753d22b98e1faa, type: 3}
+  foulSound: {fileID: 8300000, guid: 62164e8a8efc6f54690415fa44100969, type: 3}
+  turnCount: 0
+  playerPrefab: {fileID: 7923533106026039949, guid: 129d76c8013cc124b8d71387968de05e, type: 3}
+  playerPrefabAI: {fileID: 5715308089403833705, guid: 72163f87455e4b849ae17f85400f1a97, type: 3}
