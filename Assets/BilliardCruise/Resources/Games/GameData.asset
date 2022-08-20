@@ -31,7 +31,7 @@ MonoBehaviour:
       count: 2
   - level: 2
     moves: 15
-    goal: 5
+    goal: 4
     boosters:
     - booster: 0
       active_icon: {fileID: 21300000, guid: 7bdf49ddb8c7f7f4e92cc98240d83f41, type: 3}
@@ -40,7 +40,7 @@ MonoBehaviour:
     - booster: 1
       active_icon: {fileID: 21300000, guid: 1a49bb2dbd9b22440b328f629fd5a0f5, type: 3}
       deactive_icon: {fileID: 21300000, guid: d929e781c125bb64a8124a79bbfeb61f, type: 3}
-      count: 3
+      count: 1
     - booster: 3
       active_icon: {fileID: 21300000, guid: 16ba6aba5f708484c96eeff74424d41f, type: 3}
       deactive_icon: {fileID: 21300000, guid: 2da59b29a7673ca4e90bd963d6adb9d0, type: 3}

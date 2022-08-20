@@ -16,7 +16,6 @@ namespace BilliardCruise.Sava.Scripts
 
         public PlayerUI player1UI;
         public PlayerUI player2UI;
-
         [SerializeField] private Text prizeTxt;
 
         public Slider cueSlider;
@@ -86,6 +85,7 @@ namespace BilliardCruise.Sava.Scripts
             loadingUI.SetActive(false);
             UpdateTopUI();
             // StartCoroutine(iTest());
+            Debug.Log("Global Test === " + Global.coin);
         }
 
         IEnumerator iTest()

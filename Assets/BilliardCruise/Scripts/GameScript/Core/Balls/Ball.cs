@@ -226,29 +226,28 @@ namespace BilliardCruise.Sava.Scripts
 
         protected void HandleTriggerEnter(Collider col, bool isServer)
         {
-
             if (col.CompareTag("Pocket"))
             {
                 Pocket pocket = col.GetComponent<Pocket>();
                 PlayPocketSound();
                 pocket.CoverPocketWithCork();
-
-                if (isServer)
-                {
-                    poolManager.CurrentTurn.AddToPocketedBalls(this);
-                    boosterEffectManager.SwitchInvisibleEffect(false);
-                    boosterEffectManager.SwitchStrengthEffect(false);
-                    StartCoroutine(PocketCo(pocket));
-                }
+                // if (isServer)
+                // {
+                if (ballNumber != 0)
+                    GameManager.Instance.UpdateGoal();
+                poolManager.CurrentTurn.AddToPocketedBalls(this);
+                boosterEffectManager.SwitchInvisibleEffect(false);
+                boosterEffectManager.SwitchStrengthEffect(false);
+                StartCoroutine(PocketCo(pocket));
+                // }
             }
             else if (col.CompareTag("BottleNeck"))
             {
-                Vector3 targetPos = col.gameObject.transform.parent.position;
                 GetComponent<Rigidbody>().velocity = Vector3.zero;
                 GetComponent<Rigidbody>().isKinematic = true;
                 GetComponent<Collider>().enabled = false;
-
                 col.gameObject.transform.parent.GetComponent<Monster>().ballIn = gameObject;
+                col.gameObject.GetComponent<Collider>().isTrigger = false;
                 StartCoroutine(iBottleNeckCo(col.gameObject));
             }
         }
@@ -303,6 +302,7 @@ namespace BilliardCruise.Sava.Scripts
             float speed = rb.velocity.magnitude;
             Stop();
             yield return null;
+
             // transform.position = pocket.transform.world;
             // while (transform.localScale.x > 0.2f)
             // {
@@ -336,7 +336,11 @@ namespace BilliardCruise.Sava.Scripts
                 rb.angularVelocity = Vector3.zero;
                 transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
                 // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-                GameUI.Instance.ShowLoosePopup();
+                if (!GameManager.Instance.isGameEnding)
+                {
+                    GameManager.Instance.isGameEnding = true;
+                    GameUI.Instance.ShowLoosePopup();
+                }
                 yield break;
             }
 
@@ -345,7 +349,7 @@ namespace BilliardCruise.Sava.Scripts
             // poolManager.UpdateBalls();
             // Destroy(gameObject);
             gameObject.SetActive(false);
-            GameManager.Instance.UpdateGoal();
+
             // yield break;
 
 

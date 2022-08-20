@@ -52,6 +52,7 @@ namespace BilliardCruise.Sava.Scripts
         public bool isTriggerEyeEffect = false;
         public bool isTriggerDiceEffect = false;
         public bool isMoving = false;
+        public bool isGameEnding = false;
         public int moves
         {
             get
@@ -214,8 +215,8 @@ namespace BilliardCruise.Sava.Scripts
 
         public void UpdateGoal()
         {
-            if (goal < gameData.levels[level].goal)
-                goal++;
+            // if (goal < gameData.levels[level].goal)
+            goal++;
             GameUI.Instance.UpdateTopUI();
         }
 

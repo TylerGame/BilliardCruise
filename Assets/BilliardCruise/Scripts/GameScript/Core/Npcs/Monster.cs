@@ -82,6 +82,29 @@ namespace BilliardCruise.Sava.Scripts
             isCharging = false;
         }
 
+        public void GameOver()
+        {
+            switch (monsterType)
+            {
+                case MonsterType.Fish:
+
+
+                case MonsterType.Octopus:
+
+                case MonsterType.Shark:
+                    CollisionWithLiveBeing();
+                    break;
+                case MonsterType.Box:
+
+                case MonsterType.Battery:
+                    CollisionWithNonLiveBeing();
+                    break;
+                case MonsterType.Bottle:
+                    CrackBottle();
+                    break;
+            }
+        }
+
         void OnCollisionEnter(Collision collision)
         {
             if (collision.collider.tag == "Ball")
@@ -130,7 +153,7 @@ namespace BilliardCruise.Sava.Scripts
         }
         public void CollisionWithLiveBeing()
         {
-            if (GameManager.Instance.isTriggerStrengthEffect)
+            if (GameManager.Instance.isTriggerStrengthEffect || GameManager.Instance.isGameEnding)
                 damage = 10000f;
             currentHealth -= damage;
             if (currentHealth <= 0)

@@ -432,16 +432,38 @@ namespace BilliardCruise.Sava.Scripts
             GameManager.Instance.isMoving = false;
             GameManager.Instance.ResetBoosters();
 
-            if (GameManager.Instance.moves == 0)
-            {
-                // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-                GameUI.Instance.ShowLoosePopup();
-            }
 
+            Debug.Log("current goal = " + GameManager.Instance.goal + " target goal = " + GameManager.Instance.gameData.levels[GameManager.Instance.level].goal);
             if (GameManager.Instance.goal >= GameManager.Instance.gameData.levels[GameManager.Instance.level].goal)
             // if (GameManager.Instance.goal > 0)
             {
-                GameUI.Instance.ShowRewardPopup();
+                Debug.Log("AAA");
+                if (!GameManager.Instance.isGameEnding)
+                {
+                    Debug.Log("BBB");
+                    GameManager.Instance.isGameEnding = true;
+                    GameUI.Instance.ShowRewardPopup();
+                    GameObject[] monsters = GameObject.FindGameObjectsWithTag("Monster");
+                    foreach (GameObject monster in monsters)
+                    {
+                        if (monster != null)
+                        {
+                            monster.GetComponent<Monster>().GameOver();
+                        }
+                    }
+                }
+            }
+
+            else if (GameManager.Instance.moves == 0)
+            {
+                Debug.Log("CCC");
+                if (!GameManager.Instance.isGameEnding)
+                {
+                    Debug.Log("DDD");
+                    // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                    GameManager.Instance.isGameEnding = true;
+                    GameUI.Instance.ShowLoosePopup();
+                }
             }
 
         }
@@ -462,12 +484,10 @@ namespace BilliardCruise.Sava.Scripts
             {
                 return null;
             }
-
             if (ballNumber == 0)
             {
                 return CueBall;
             }
-
             return Balls[ballNumber - 1];
         }
 
@@ -494,7 +514,6 @@ namespace BilliardCruise.Sava.Scripts
                 int randomBallNumber = Random.Range(9, 16);
                 return GetBall(randomBallNumber);
             }
-
             return null;
         }
 
@@ -709,7 +728,6 @@ namespace BilliardCruise.Sava.Scripts
                     if (GetBallsOfType(turn.PocketedBalls, BallType.SOLID).Count >
                     GetBallsOfType(turn.PocketedBalls, BallType.STRIPED).Count)
                     {
-
                         currentPlayerBalls = BallType.SOLID;
                         waitingPlayerBalls = BallType.STRIPED;
                     }

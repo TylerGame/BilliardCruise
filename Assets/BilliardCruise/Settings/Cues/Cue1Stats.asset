@@ -17,7 +17,7 @@ MonoBehaviour:
   cueSprite: {fileID: 21300000, guid: 140efc5b5a14e244699b6fb7793a9ef4, type: 3}
   price: 0
   minStrength: 0.1
-  maxStrength: 20
+  maxStrength: 12
   maxSpin: 40
   aimLength: 0.15
   timePerMove: 30
