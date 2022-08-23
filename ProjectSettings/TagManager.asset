@@ -13,6 +13,7 @@ TagManager:
   - BallCamera
   - PocketHole
   - BottleNeck
+  - PierItem
   layers:
   - Default
   - TransparentFX

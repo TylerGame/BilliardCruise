@@ -5,7 +5,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
-using TMPro;
 using DG.Tweening;
 using Krivodeling.UI.Effects;
 namespace BilliardCruise.Sava.Scripts
@@ -14,8 +13,18 @@ namespace BilliardCruise.Sava.Scripts
 
     public class MenuManager : MonoBehaviour
     {
+
+        private static MenuManager instance;
+
+        public static MenuManager Instance
+        {
+            get
+            {
+                return instance;
+            }
+        }
         [SerializeField]
-        GameObject obj_PlayGameUI, obj_LoadingUI;
+        GameObject obj_PlayGameUI, obj_LoadingUI, obj_PierUI, obj_ZonesUI;
 
         [SerializeField]
         Image obj_loadingBarForeground;
@@ -43,9 +52,25 @@ namespace BilliardCruise.Sava.Scripts
         [SerializeField] GameObject starDisplay, coinDisplay, keyDisplay;
         [SerializeField] GameObject starEffect, coinEffect, keyEffect;
         [SerializeField] GameObject starNum, coinNum, keyNum;
-
-
         [SerializeField] GameObject zoneBanner;
+        [SerializeField] GameObject[] pierStars;
+        [SerializeField] Waypoints[] pierStarWays;
+        [SerializeField] GameObject pierStarbar;
+        public GameObject pierYesButton;
+        public int pierWay;
+
+
+        private void Awake()
+        {
+            if (instance == null)
+            {
+                instance = this;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+        }
 
         // Start is called before the first frame update
         void Start()
@@ -69,6 +94,16 @@ namespace BilliardCruise.Sava.Scripts
             keyNum.SetActive(false);
 
             zoneBanner.SetActive(false);
+
+            obj_PlayGameUI.SetActive(false);
+            obj_LoadingUI.SetActive(false);
+            obj_PierUI.SetActive(false);
+            obj_ZonesUI.SetActive(false);
+
+            foreach (GameObject o in pierStars)
+            {
+                o.SetActive(false);
+            }
             // uiBluer.BuildFlipMode = FlipMode.Y;
         }
 
@@ -81,6 +116,68 @@ namespace BilliardCruise.Sava.Scripts
         }
 
 
+        public void startPierStarEffect()
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                StartCoroutine(iStarEffect());
+            }
+        }
+
+        IEnumerator iStarEffect()
+        {
+            yield return null;
+            // pierStars[index].SetActive(true);
+            pierStarbar.transform.DOPunchScale(Vector3.one * 0.1f, 0.2f, 5).OnComplete(() =>
+                {
+                    pierStarbar.transform.localScale = Vector3.one;
+                    pierStars[0].SetActive(true);
+                    pierStars[0].transform.DOPath(pierStarWays[pierWay].waypoints.ToArray(), 0.5f, PathType.Linear, PathMode.TopDown2D).OnComplete(() =>
+                    {
+                        pierStars[0].SetActive(false);
+                        pierStars[0].transform.localPosition = new Vector3(438f, 1584f, 0);
+                        pierYesButton.transform.DOPunchScale(Vector3.one * 0.1f, 0.2f, 5).OnComplete(() =>
+                        {
+                            pierYesButton.transform.localScale = Vector3.one;
+                        });
+                    });
+                    pierStarbar.transform.DOPunchScale(Vector3.one * 0.1f, 0.2f, 5).OnComplete(() =>
+                    {
+                        pierStarbar.transform.localScale = Vector3.one;
+                        pierStars[1].SetActive(true);
+
+                        pierStars[1].transform.DOPath(pierStarWays[pierWay].waypoints.ToArray(), 0.5f, PathType.Linear, PathMode.TopDown2D).OnComplete(() =>
+                            {
+                                pierStars[1].SetActive(false);
+                                pierStars[1].transform.localPosition = new Vector3(438f, 1584f, 0);
+                                pierYesButton.transform.DOPunchScale(Vector3.one * 0.1f, 0.2f, 5).OnComplete(() =>
+                                {
+                                    pierYesButton.transform.localScale = Vector3.one;
+                                });
+                            });
+
+                        pierStarbar.transform.DOPunchScale(Vector3.one * 0.1f, 0.2f, 5).OnComplete(() =>
+                        {
+                            pierStarbar.transform.localScale = Vector3.one;
+                            pierStars[2].SetActive(true);
+                            pierStars[2].transform.DOPath(pierStarWays[pierWay].waypoints.ToArray(), 0.5f, PathType.Linear, PathMode.TopDown2D).OnComplete(() =>
+                            {
+                                pierStars[2].SetActive(false);
+                                pierStars[2].transform.localPosition = new Vector3(438f, 1584f, 0);
+                                pierYesButton.transform.DOPunchScale(Vector3.one * 0.1f, 0.2f, 5).OnComplete(() =>
+                                {
+                                    pierYesButton.transform.localScale = Vector3.one;
+                                });
+                            });
+
+                        });
+                    });
+
+                });
+
+        }
+
+
 
         void OnEnable()
         {
@@ -88,6 +185,39 @@ namespace BilliardCruise.Sava.Scripts
             SwipeDetector._OnSwipeRight += OnSwipeRight;
             SwipeDetector._OnSwipeDown += OnSwipeDown;
             SwipeDetector._OnSwipeUp += OnSwipeUp;
+        }
+
+
+        public void OnClick_ZoneButton()
+        {
+            obj_LoadingUI.SetActive(false);
+            obj_PlayGameUI.SetActive(false);
+            obj_ZonesUI.SetActive(false);
+            obj_PierUI.SetActive(true);
+        }
+
+        public void OnClick_PierCloseButton()
+        {
+            obj_LoadingUI.SetActive(false);
+            obj_PlayGameUI.SetActive(false);
+            obj_ZonesUI.SetActive(false);
+            obj_PierUI.SetActive(false);
+        }
+
+        public void OnClick_ZoneCloseButton()
+        {
+            obj_LoadingUI.SetActive(false);
+            obj_PlayGameUI.SetActive(false);
+            obj_ZonesUI.SetActive(false);
+            obj_PierUI.SetActive(true);
+        }
+
+        public void OnClick_AllZonesButton()
+        {
+            obj_LoadingUI.SetActive(false);
+            obj_PlayGameUI.SetActive(false);
+            obj_ZonesUI.SetActive(true);
+            obj_PierUI.SetActive(true);
         }
 
         public void StartAnimCoin_Star()

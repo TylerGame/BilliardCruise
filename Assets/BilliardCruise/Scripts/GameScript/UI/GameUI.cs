@@ -171,7 +171,11 @@ namespace BilliardCruise.Sava.Scripts
             levelPopup.SetActive(false);
             loosePopup.SetActive(false);
             rewardPopup.SetActive(true);
-            rewardPopup.GetComponent<RectTransform>().DOPunchScale(Vector3.one * 0.3f, 0.5f, 0, 1);
+
+            rewardPopup.GetComponent<RectTransform>().DOPunchScale(Vector3.one * 0.3f, 0.5f, 0, 1).OnComplete(() =>
+            {
+                rewardPopup.GetComponent<WinPopupUI>().StartEffect();
+            });
         }
 
         public void ShowLevelPopup()
