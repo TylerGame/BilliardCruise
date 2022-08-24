@@ -24,7 +24,7 @@ namespace BilliardCruise.Sava.Scripts
             }
         }
         [SerializeField]
-        GameObject obj_PlayGameUI, obj_LoadingUI, obj_PierUI, obj_ZonesUI;
+        GameObject obj_PlayGameUI, obj_LoadingUI, obj_PierUI, obj_ZonesUI, obj_PierComponent;
 
         [SerializeField]
         Image obj_loadingBarForeground;
@@ -53,11 +53,83 @@ namespace BilliardCruise.Sava.Scripts
         [SerializeField] GameObject starEffect, coinEffect, keyEffect;
         [SerializeField] GameObject starNum, coinNum, keyNum;
         [SerializeField] GameObject zoneBanner;
-        [SerializeField] GameObject[] pierStars;
+        public GameObject prefabPierStar;
+        public GameObject prefabGlitterEffect;
+        [SerializeField] GameObject pierStarContainer;
+
         [SerializeField] Waypoints[] pierStarWays;
         [SerializeField] GameObject pierStarbar;
+
+        [SerializeField] GameObject zoneBtn, playBtn, dailyTaskBtn, battlePassBtn, eventBtn, coinBar, timeBar, starBar, menuBar;
+
+        [SerializeField] GameObject bridge;
+
         public GameObject pierYesButton;
+        public GameObject pierCurOption;
         public int pierWay;
+        /// <summary>
+        /// Game Data
+        /// </summary>
+
+        public int currentStar;
+
+        private int _nextStar;
+        public int nextStar
+        {
+            set
+            {
+                _nextStar = value;
+                StartCoroutine(iStarCount());
+            }
+
+            get
+            {
+                return _nextStar;
+            }
+        }
+
+
+
+        public int curCoin;
+        private int _nextCoin;
+        public int nextCoin
+        {
+            set
+            {
+                _nextCoin = value;
+                StartCoroutine(iCoinCount());
+            }
+
+            get
+            {
+                return _nextCoin;
+            }
+        }
+
+        public float currentTime;
+
+
+        IEnumerator iCoinCount()
+        {
+            yield return null;
+            while (curCoin < nextCoin)
+            {
+                curCoin++;
+                yield return null;
+            }
+            curCoin = nextCoin;
+        }
+
+        IEnumerator iStarCount()
+        {
+            yield return null;
+            while (currentStar < nextStar)
+            {
+                currentStar++;
+                yield return null;
+            }
+            currentStar = nextStar;
+        }
 
 
         private void Awake()
@@ -71,6 +143,8 @@ namespace BilliardCruise.Sava.Scripts
                 Destroy(gameObject);
             }
         }
+
+
 
         // Start is called before the first frame update
         void Start()
@@ -100,80 +174,148 @@ namespace BilliardCruise.Sava.Scripts
             obj_PierUI.SetActive(false);
             obj_ZonesUI.SetActive(false);
 
-            foreach (GameObject o in pierStars)
-            {
-                o.SetActive(false);
-            }
+            bridge.GetComponent<Animator>().speed = 0f;
+
+            curCoin = 683;
+            nextCoin = curCoin;
+            currentStar = 2;
+            nextStar = currentStar;
+            // foreach (GameObject o in pierStars)
+            // {
+            //     o.SetActive(false);
+            // }
             // uiBluer.BuildFlipMode = FlipMode.Y;
         }
 
         // Update is called once per frame
         void Update()
         {
+            coinBar.GetComponentInChildren<TMP_Text>().text = curCoin.ToString();
+            starBar.GetComponentInChildren<TMP_Text>().text = currentStar.ToString();
+            currentTime -= Time.deltaTime;
+            timeBar.GetComponentInChildren<TMP_Text>().text = getTimeFormat();
+        }
 
+        string getTimeFormat()
+        {
+            int m = Mathf.FloorToInt(currentTime) / 60;
+            int s = Mathf.FloorToInt(currentTime) % 60;
 
-
+            return m.ToString("00") + ":" + s.ToString("00");
         }
 
 
-        public void startPierStarEffect()
+        public void startPierStarEffect(float n)
         {
-            for (int i = 0; i < 3; i++)
+            Invoke("BuildAPier", 0.3f * (n + 1));
+            for (int i = 0; i < n; i++)
             {
-                StartCoroutine(iStarEffect());
+                Invoke("StarEffect", 0.3f * i);
             }
+        }
+
+
+        void StarEffect()
+        {
+            StartCoroutine(iStarEffect());
         }
 
         IEnumerator iStarEffect()
         {
             yield return null;
+            GameObject pierStar = Instantiate(prefabPierStar, pierStarContainer.transform);
+            pierStar.transform.localPosition = new Vector3(438f, 1584f, 0);
             // pierStars[index].SetActive(true);
             pierStarbar.transform.DOPunchScale(Vector3.one * 0.1f, 0.2f, 5).OnComplete(() =>
                 {
                     pierStarbar.transform.localScale = Vector3.one;
-                    pierStars[0].SetActive(true);
-                    pierStars[0].transform.DOPath(pierStarWays[pierWay].waypoints.ToArray(), 0.5f, PathType.Linear, PathMode.TopDown2D).OnComplete(() =>
+                    currentStar--;
+                    pierStar.transform.DOPath(pierStarWays[pierWay].waypoints.ToArray(), 0.5f, PathType.Linear, PathMode.TopDown2D).OnComplete(() =>
                     {
-                        pierStars[0].SetActive(false);
-                        pierStars[0].transform.localPosition = new Vector3(438f, 1584f, 0);
+                        Destroy(pierStar);
                         pierYesButton.transform.DOPunchScale(Vector3.one * 0.1f, 0.2f, 5).OnComplete(() =>
                         {
                             pierYesButton.transform.localScale = Vector3.one;
+                            obj_PierComponent.GetComponent<PierComponent>().progressBar.nextValue++;
                         });
                     });
-                    pierStarbar.transform.DOPunchScale(Vector3.one * 0.1f, 0.2f, 5).OnComplete(() =>
-                    {
-                        pierStarbar.transform.localScale = Vector3.one;
-                        pierStars[1].SetActive(true);
-
-                        pierStars[1].transform.DOPath(pierStarWays[pierWay].waypoints.ToArray(), 0.5f, PathType.Linear, PathMode.TopDown2D).OnComplete(() =>
-                            {
-                                pierStars[1].SetActive(false);
-                                pierStars[1].transform.localPosition = new Vector3(438f, 1584f, 0);
-                                pierYesButton.transform.DOPunchScale(Vector3.one * 0.1f, 0.2f, 5).OnComplete(() =>
-                                {
-                                    pierYesButton.transform.localScale = Vector3.one;
-                                });
-                            });
-
-                        pierStarbar.transform.DOPunchScale(Vector3.one * 0.1f, 0.2f, 5).OnComplete(() =>
-                        {
-                            pierStarbar.transform.localScale = Vector3.one;
-                            pierStars[2].SetActive(true);
-                            pierStars[2].transform.DOPath(pierStarWays[pierWay].waypoints.ToArray(), 0.5f, PathType.Linear, PathMode.TopDown2D).OnComplete(() =>
-                            {
-                                pierStars[2].SetActive(false);
-                                pierStars[2].transform.localPosition = new Vector3(438f, 1584f, 0);
-                                pierYesButton.transform.DOPunchScale(Vector3.one * 0.1f, 0.2f, 5).OnComplete(() =>
-                                {
-                                    pierYesButton.transform.localScale = Vector3.one;
-                                });
-                            });
-
-                        });
-                    });
-
                 });
+        }
+
+        void BuildAPier()
+        {
+            StartCoroutine(iBuildAPier());
+        }
+
+        IEnumerator iBuildAPier()
+        {
+            dailyTaskBtn.transform.localPosition = new Vector3(-550f, 1237f, 0f);
+            battlePassBtn.transform.localPosition = new Vector3(9f, 1231f, 0f);
+            eventBtn.transform.localPosition = new Vector3(576f, 1243f, 0f);
+
+            coinBar.transform.localPosition = new Vector3(-523f, 1594f, 0f);
+            timeBar.transform.localPosition = new Vector3(60f, 1594f, 0f);
+            starBar.transform.localPosition = new Vector3(591f, 1594f, 0f);
+
+            playBtn.transform.localPosition = new Vector3(414f, -1231f, 0f);
+            zoneBtn.transform.localPosition = new Vector3(-423f, -1233f, 0f);
+            menuBar.transform.localPosition = new Vector3(0, -1693.25f, 0f);
+
+            pierStarbar.transform.localPosition = new Vector3(592f, 1585f, 0f);
+
+            yield return null;
+
+            pierYesButton.SetActive(false);
+            obj_PierUI.GetComponent<Image>().enabled = false;
+            yield return new WaitForSeconds(0.3f);
+
+            coinBar.transform.DOLocalMoveX(-2000f, 0.3f);
+            timeBar.transform.DOLocalMoveY(2000f, 0.3f);
+            starBar.transform.DOLocalMoveX(2000f, 0.3f);
+            pierStarbar.transform.DOLocalMoveY(2000f, 0.3f);
+
+            dailyTaskBtn.transform.DOLocalMoveX(-2000f, 0.3f);
+            battlePassBtn.transform.DOLocalMoveY(4000f, 0.3f);
+            eventBtn.transform.DOLocalMoveX(2000f, 0.3f);
+
+            menuBar.transform.DOLocalMoveY(-4000f, 0.3f);
+
+            playBtn.transform.DOLocalMoveX(2000f, 0.3f);
+            zoneBtn.transform.DOLocalMoveX(-2000f, 0.3f);
+
+            yield return new WaitForSeconds(0.3f);
+
+            obj_PierComponent.transform.DOScale(Vector3.zero, 0.3f);
+            yield return new WaitForSeconds(0.3f);
+            bridge.GetComponent<Animator>().speed = 1f;
+
+
+            yield return new WaitForSeconds(2f);
+
+            coinBar.transform.DOLocalMoveX(-523f, 0.3f);
+            timeBar.transform.DOLocalMoveY(1594f, 0.3f);
+            starBar.transform.DOLocalMoveX(591f, 0.3f);
+            pierStarbar.transform.DOLocalMoveY(2000f, 0.3f);
+
+            dailyTaskBtn.transform.DOLocalMoveX(-550f, 0.3f);
+            battlePassBtn.transform.DOLocalMoveY(1231f, 0.3f);
+            eventBtn.transform.DOLocalMoveX(576f, 0.3f);
+
+            menuBar.transform.DOLocalMoveY(-1693.25f, 0.3f);
+
+            playBtn.transform.DOLocalMoveX(414f, 0.3f);
+            zoneBtn.transform.DOLocalMoveX(-423f, 0.3f);
+
+            yield return new WaitForSeconds(0.5f);
+            zoneBanner.SetActive(false);
+            zoneBtn.GetComponentInChildren<ProgressBarUI>().nextValue += 3f;
+            GameObject glitterEffect = Instantiate(prefabGlitterEffect, obj_windows[2].transform);
+            glitterEffect.transform.DOLocalMove(zoneBtn.transform.localPosition, 0.5f).OnComplete(() =>
+            {
+                DestroyObject(glitterEffect);
+                pierCurOption.SetActive(false);
+
+            });
 
         }
 
@@ -194,6 +336,12 @@ namespace BilliardCruise.Sava.Scripts
             obj_PlayGameUI.SetActive(false);
             obj_ZonesUI.SetActive(false);
             obj_PierUI.SetActive(true);
+            obj_PierUI.GetComponent<Image>().enabled = true;
+            obj_PierComponent.transform.localScale = Vector3.one;
+            obj_PierComponent.transform.DOPunchScale(Vector3.one * 0.2f, 0.3f, 5).OnComplete(() =>
+            {
+                obj_PierComponent.transform.localScale = Vector3.one;
+            });
         }
 
         public void OnClick_PierCloseButton()
@@ -255,6 +403,7 @@ namespace BilliardCruise.Sava.Scripts
                     starEffect.GetComponent<Animator>().SetTrigger("Glitter");
                     starDisplay.transform.DOPunchScale(Vector3.one * 0.1f, 0.5f, 5).OnComplete(() =>
                     {
+                        nextStar += 2;
                         starEffect.SetActive(false);
                     });
                 });
@@ -313,6 +462,7 @@ namespace BilliardCruise.Sava.Scripts
                     coinDisplay.transform.DOPunchScale(Vector3.one * 0.1f, 0.5f, 5).OnComplete(() =>
                     {
                         coinEffect.SetActive(false);
+                        nextCoin += 250;
                     });
 
                     StartAnimation_Key();

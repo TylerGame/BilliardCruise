@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 namespace BilliardCruise.Sava.Scripts
 {
@@ -9,10 +10,12 @@ namespace BilliardCruise.Sava.Scripts
         public int order;
         public Transform container;
         public GameObject yesButton;
+        public TMP_Text t_stars;
+        public int neededStarCount;
         // Start is called before the first frame update
         void Start()
         {
-
+            t_stars.text = neededStarCount.ToString();
         }
 
         // Update is called once per frame
@@ -31,15 +34,17 @@ namespace BilliardCruise.Sava.Scripts
                     break;
                 case 1:
                     MenuManager.Instance.pierYesButton = yesButton;
+                    MenuManager.Instance.pierCurOption = gameObject;
                     MenuManager.Instance.pierWay = 0;
                     break;
                 case 2:
                     MenuManager.Instance.pierYesButton = yesButton;
+                    MenuManager.Instance.pierCurOption = gameObject;
                     MenuManager.Instance.pierWay = order;
                     break;
             }
 
-            MenuManager.Instance.startPierStarEffect();
+            MenuManager.Instance.startPierStarEffect(neededStarCount);
         }
     }
 }
