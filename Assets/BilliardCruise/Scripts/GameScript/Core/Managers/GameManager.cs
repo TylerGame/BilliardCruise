@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,13 @@ using UnityEngine.SceneManagement;
 
 namespace BilliardCruise.Sava.Scripts
 {
+
+    [Serializable]
+    public class GameDataUndoInfo
+    {
+        public int moves;
+        public int goal;
+    }
     public class GameManager : MonoBehaviour
     {
 
@@ -13,7 +21,7 @@ namespace BilliardCruise.Sava.Scripts
         private const string BALL_PREFIX = "BALL ";
 
         private static Dictionary<int, Ball> ballsDictionary = new Dictionary<int, Ball>();
-
+        private static List<GameObject> monstersList = new List<GameObject>();
         public static int BallsCount
         {
             get
@@ -51,6 +59,8 @@ namespace BilliardCruise.Sava.Scripts
         public bool isTriggerStrengthEffect = false;
         public bool isTriggerEyeEffect = false;
         public bool isTriggerDiceEffect = false;
+
+        public bool isTriggerUndoEffect = false;
         public bool isMoving = false;
         public bool isGameEnding = false;
         public int moves
@@ -117,9 +127,10 @@ namespace BilliardCruise.Sava.Scripts
             }
         }
 
+
+        List<GameDataUndoInfo> undos = new List<GameDataUndoInfo>();
         public void ResetBoosters()
         {
-
 
             // PoolManager.Instance.CueBall.GetComponent<Ball_Local>().boosterEffectManager.SwitchInvisibleEffect(false);
             // PoolManager.Instance.CueBall.GetComponent<Ball_Local>().boosterEffectManager.SwitchStrengthEffect(false);
@@ -153,9 +164,37 @@ namespace BilliardCruise.Sava.Scripts
 
         }
 
+        public void SaveUndo()
+        {
+            GameDataUndoInfo undo = new GameDataUndoInfo();
+            undo.moves = moves;
+            undo.goal = goal;
+            undos.Add(undo);
+        }
+
+        public bool DoUndo()
+        {
+            if (undos.Count >= 2)
+            {
+                GameDataUndoInfo undo = undos[undos.Count - 2];
+                goal = undo.goal;
+                moves = undo.moves;
+                undos.RemoveAt(undos.Count - 1);
+                undos.RemoveAt(undos.Count - 1);
+                SaveUndo();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
         public static void AddBall(int ballNumber, Ball ball)
         {
             ballsDictionary.Add(ballNumber, ball);
+
 
             ball.transform.name = BALL_PREFIX + ballNumber;
         }
@@ -169,6 +208,13 @@ namespace BilliardCruise.Sava.Scripts
         {
             return ballsDictionary[ballNumber];
         }
+
+        public static int GetBallCount()
+        {
+            return ballsDictionary.Count;
+        }
+
+
 
         void Awake()
         {
@@ -192,6 +238,7 @@ namespace BilliardCruise.Sava.Scripts
         void Start()
         {
             StartCoroutine(iGetBall());
+            SaveUndo();
         }
 
         void Update()

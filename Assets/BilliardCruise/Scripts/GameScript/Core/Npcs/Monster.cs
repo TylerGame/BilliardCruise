@@ -1,10 +1,28 @@
+using System.Threading.Tasks;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
+
 
 namespace BilliardCruise.Sava.Scripts
 {
+
+
+    [Serializable]
+    public class UndoMonsterInfo
+    {
+        public Vector3 position;
+        public float maxHealth;
+        public float currentHealth;
+        public float damage;
+        public bool isdead;
+        public GameObject ballIn;
+
+
+    }
     public class Monster : MonoBehaviour
     {
 
@@ -41,6 +59,9 @@ namespace BilliardCruise.Sava.Scripts
         public GameObject left_neighbor;
         public GameObject right_neighbor;
 
+        List<UndoMonsterInfo> undos = new List<UndoMonsterInfo>();
+
+
         // Start is called before the first frame update
         void Start()
         {
@@ -58,6 +79,60 @@ namespace BilliardCruise.Sava.Scripts
             dirs[5] = new Vector3(-1, 0, -1);
             dirs[6] = new Vector3(0, 0, -1);
             dirs[7] = new Vector3(1, 0, -1);
+
+
+            SaveUndo();
+        }
+
+        public void DoUndo()
+        {
+            if (undos.Count >= 2)
+            {
+                UndoMonsterInfo undo = undos[undos.Count - 2];
+                currentHealth = undo.currentHealth;
+                MaxHealth = undo.maxHealth;
+                damage = undo.damage;
+                isDead = undo.isdead;
+                ballIn = undo.ballIn;
+                transform.position = undo.position;
+                if (healthBar != null)
+                    healthBar.size = new Vector2(currentHealth / MaxHealth, 0.65f);
+                GetComponent<Collider>().enabled = !isDead;
+                GetComponent<Animator>().enabled = !isDead;
+                if (monsterType == MonsterType.Battery || monsterType == MonsterType.Box)
+                {
+                    GetComponent<SpriteRenderer>().enabled = !isDead;
+                }
+                undos.RemoveAt(undos.Count - 1);
+                undos.RemoveAt(undos.Count - 1);
+                SaveUndo();
+                Transform[] children = GetComponentsInChildren<Transform>();
+                if (monsterType != MonsterType.Battery && monsterType != MonsterType.Box)
+                {
+                    foreach (Transform child in children)
+                    {
+                        if (!child.gameObject.name.Equals("particle"))
+                        {
+                            if (child.GetComponent<SpriteRenderer>() != null && !isDead)
+                            {
+                                child.GetComponent<SpriteRenderer>().enabled = true;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public void SaveUndo()
+        {
+            UndoMonsterInfo undo = new UndoMonsterInfo();
+            undo.currentHealth = currentHealth;
+            undo.maxHealth = MaxHealth;
+            undo.damage = damage;
+            undo.ballIn = ballIn;
+            undo.isdead = isDead;
+            undo.position = transform.position;
+            undos.Add(undo);
         }
 
         // Update is called once per frame
@@ -67,7 +142,7 @@ namespace BilliardCruise.Sava.Scripts
             // {
             //     Debug.DrawLine(transform.position + new Vector3(0, 0, 0.5f), transform.position + new Vector3(0, 0, 0.5f) + dir, Color.red, 10f);
             // }
-            if (monsterType == MonsterType.Battery && !isCharging)
+            if (monsterType == MonsterType.Battery && !isCharging && !isDead)
             {
                 isCharging = true;
                 StartCoroutine(iChargeBattery());
@@ -87,7 +162,6 @@ namespace BilliardCruise.Sava.Scripts
             switch (monsterType)
             {
                 case MonsterType.Fish:
-
 
                 case MonsterType.Octopus:
 
@@ -148,7 +222,6 @@ namespace BilliardCruise.Sava.Scripts
                     ballIn.GetComponent<Collider>().enabled = true;
                     ballIn.GetComponent<Rigidbody>().AddForce(Random.insideUnitCircle.normalized * Random.Range(1f, 5f));
                 }
-
             }
         }
         public void CollisionWithLiveBeing()
@@ -218,7 +291,8 @@ namespace BilliardCruise.Sava.Scripts
 
         public void AttackPlayer()
         {
-            StartCoroutine(iAttackPlayer());
+            if (!isDead)
+                StartCoroutine(iAttackPlayer());
         }
         IEnumerator iAttackPlayer()
         {
@@ -261,7 +335,6 @@ namespace BilliardCruise.Sava.Scripts
                 yield return new WaitForSeconds(0.1f);
                 transform.position += dirs[min_i] / 2f;
             }
-
         }
 
 
@@ -270,20 +343,52 @@ namespace BilliardCruise.Sava.Scripts
         IEnumerator iDoDeath()
         {
             yield return null;
-            SpriteRenderer[] renders = GetComponentsInChildren<SpriteRenderer>();
+
+            Transform[] children = GetComponentsInChildren<Transform>();
             if (monsterType != MonsterType.Battery && monsterType != MonsterType.Box)
             {
-                foreach (SpriteRenderer render in renders)
+                foreach (Transform child in children)
                 {
-                    if (!render.gameObject.name.Equals("particle"))
-                        render.enabled = false;
+                    if (!child.gameObject.name.Equals("particle"))
+                    {
+                        if (child.GetComponent<SpriteRenderer>() != null)
+                        {
+                            child.GetComponent<SpriteRenderer>().enabled = false;
+                        }
+                    }
                 }
             }
-
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.7f);
+            GetComponent<Collider>().enabled = false;
+            GetComponent<Animator>().enabled = false;
+            if (monsterType == MonsterType.Battery || monsterType == MonsterType.Box)
+            {
+                GetComponent<SpriteRenderer>().enabled = false;
+            }
+            children = GetComponentsInChildren<Transform>();
+            if (monsterType != MonsterType.Battery && monsterType != MonsterType.Box)
+            {
+                foreach (Transform child in children)
+                {
+                    if (!child.gameObject.name.Equals("particle"))
+                    {
+                        if (child.GetComponent<SpriteRenderer>() != null)
+                        {
+                            child.GetComponent<SpriteRenderer>().enabled = false;
+                        }
+                    }
+                }
+            }
             // if (healthBar != null)
             //     Destroy(healthBar);
-            Destroy(gameObject);
+            //  Destroy(gameObject);
+            // gameObject.SetActive(false);
+
+
+        }
+
+        public void DisableObject()
+        {
 
         }
     }

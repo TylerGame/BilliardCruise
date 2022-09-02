@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,14 @@ using UnityEngine.SceneManagement;
 
 namespace BilliardCruise.Sava.Scripts
 {
+
+    [Serializable]
+    public class UndoBallInfo
+    {
+        public Vector3 position;
+        public bool isPocketed;
+    }
+
     public class Ball : MonoBehaviour
     {
 
@@ -26,12 +35,13 @@ namespace BilliardCruise.Sava.Scripts
         protected Rigidbody rb;
         protected MeshRenderer meshRenderer;
         protected AudioSource audioSrc;
-
         protected BallCollector ballCollector;
 
         public BoosterEffectManager boosterEffectManager;
         public GameObject prefabOfBoosterEffect;
         public GameObject prefabOfUtilsforEffects;
+
+        public List<UndoBallInfo> undos = new List<UndoBallInfo>();
 
         public float Radius
         {
@@ -110,25 +120,19 @@ namespace BilliardCruise.Sava.Scripts
             }
         }
 
+
+        public bool isPocketed = false;
+
         protected virtual void Awake()
         {
             poolManager = GameObject.FindObjectOfType<PoolManager>();
-
             rb = GetComponent<Rigidbody>();
             rb.maxAngularVelocity = maxAngularVelocity;
-
             meshRenderer = GetComponent<MeshRenderer>();
             meshRenderer.material.mainTexture = ballTexture;
-
             audioSrc = GetComponent<AudioSource>();
-
             Radius = GetComponent<Collider>().bounds.size.x / 2.0f;
-
             ballCollector = GameObject.FindObjectOfType<BallCollector>();
-
-
-
-
         }
 
 
@@ -137,8 +141,44 @@ namespace BilliardCruise.Sava.Scripts
             GameObject obj = Instantiate(prefabOfBoosterEffect);
             boosterEffectManager = obj.GetComponent<BoosterEffectManager>();
             boosterEffectManager.owner = gameObject;
+            SaveUndo();
         }
 
+
+        public void DoUndo()
+        {
+            if (undos.Count >= 2)
+            {
+                UndoBallInfo undo = undos[undos.Count - 2];
+                transform.position = undo.position;
+                isPocketed = undo.isPocketed;
+                GetComponent<MeshRenderer>().enabled = !isPocketed;
+                GetComponent<Collider>().enabled = !isPocketed;
+                SetGravity(!isPocketed);
+                if (isPocketed)
+                    SetLayer(0);
+                else
+                {
+                    poolManager.CurrentTurn.RemoveBallFromPocket(this);
+                    SetLayer(8);
+                    transform.localScale = Vector3.one * 0.8f;
+                }
+                undos.RemoveAt(undos.Count - 1);
+                undos.RemoveAt(undos.Count - 1);
+                SaveUndo();
+                // GameManager.Instance.moves++;
+                // GameUI.Instance.UpdateTopUI();
+            }
+        }
+
+
+        public void SaveUndo()
+        {
+            UndoBallInfo undo = new UndoBallInfo();
+            undo.position = transform.position;
+            undo.isPocketed = isPocketed;
+            undos.Add(undo);
+        }
         protected virtual void Update()
         {
             if (rb.velocity.y > 0)
@@ -236,6 +276,7 @@ namespace BilliardCruise.Sava.Scripts
                 if (ballNumber != 0)
                     GameManager.Instance.UpdateGoal();
                 poolManager.CurrentTurn.AddToPocketedBalls(this);
+                isPocketed = true;
                 boosterEffectManager.SwitchInvisibleEffect(false);
                 boosterEffectManager.SwitchStrengthEffect(false);
                 StartCoroutine(PocketCo(pocket));
@@ -348,7 +389,8 @@ namespace BilliardCruise.Sava.Scripts
             // GameManager.RemoveBall(ballNumber);
             // poolManager.UpdateBalls();
             // Destroy(gameObject);
-            gameObject.SetActive(false);
+            //  gameObject.SetActive(false);
+            GetComponent<MeshRenderer>().enabled = false;
 
             // yield break;
 

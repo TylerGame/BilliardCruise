@@ -11,26 +11,21 @@ namespace BilliardCruise.Sava.Scripts
             base.Awake();
             GameManager.AddBall(BallNumber, this);
         }
-
         protected override void Update()
         {
             base.Update();
         }
-
         void OnCollisionEnter(Collision col)
         {
             HandleCollisionEnter(col, true);
         }
-
         void OnTriggerEnter(Collider col)
         {
             HandleTriggerEnter(col, true);
         }
-
         void OnDisable()
         {
             GameManager.RemoveBall(BallNumber);
         }
-
     }
 }

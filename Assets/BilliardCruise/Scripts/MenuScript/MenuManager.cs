@@ -44,7 +44,8 @@ namespace BilliardCruise.Sava.Scripts
         private bool isAcceptableSwipe = false;
 
 
-        [SerializeField] private Image c_text1, c_text2, c_text3, c_text4;
+        [SerializeField] private TMP_Text c_text1, c_text2, c_text3, c_text4;
+        [SerializeField] private TMP_Text c_lvTitle;
 
         [SerializeField] GameObject coinModel, starModel, keyModel;
         public Waypoints starWays, coinWays, keyWays;
@@ -107,6 +108,8 @@ namespace BilliardCruise.Sava.Scripts
         }
 
         public float currentTime;
+
+        public GameObject pierItem;
 
 
         IEnumerator iCoinCount()
@@ -176,15 +179,41 @@ namespace BilliardCruise.Sava.Scripts
 
             bridge.GetComponent<Animator>().speed = 0f;
 
-            curCoin = 683;
+            curCoin = PlayerPrefs.GetInt("CurCoin", 0);
             nextCoin = curCoin;
-            currentStar = 2;
+            Global.cur_coin = curCoin;
+
+            currentStar = PlayerPrefs.GetInt("CurStar", 0);
             nextStar = currentStar;
+            Global.cur_star = currentStar;
+
+            Global.cur_key = PlayerPrefs.GetInt("CurKey", 0);
+
+
+
+            StartCoroutine(iCheckReward());
+
+
             // foreach (GameObject o in pierStars)
             // {
             //     o.SetActive(false);
             // }
             // uiBluer.BuildFlipMode = FlipMode.Y;
+        }
+
+        IEnumerator iCheckReward()
+        {
+            yield return null;
+
+            if (Global.got_coin != 0)
+            {
+                StartAnimation_Coin();
+            }
+
+            if (Global.got_star != 0)
+            {
+                StartAnimCoin_Star();
+            }
         }
 
         // Update is called once per frame
@@ -373,6 +402,7 @@ namespace BilliardCruise.Sava.Scripts
             starModel.transform.localScale = Vector3.zero;
             starModel.SetActive(true);
             starNum.SetActive(true);
+            starNum.GetComponent<TMP_Text>().text = Global.got_star.ToString();
 
 
             starModel.transform.DOScale(Vector3.one, 0.2f).OnComplete(() =>
@@ -395,6 +425,8 @@ namespace BilliardCruise.Sava.Scripts
                 {
                     starModel.GetComponent<RectTransform>().localPosition = new Vector3(173f, 0f, 0f);
                 });
+
+
                 starModel.transform.DOScale(Vector3.one * 0.7f, 1f).OnComplete(() =>
                 {
                     starModel.SetActive(false);
@@ -403,7 +435,10 @@ namespace BilliardCruise.Sava.Scripts
                     starEffect.GetComponent<Animator>().SetTrigger("Glitter");
                     starDisplay.transform.DOPunchScale(Vector3.one * 0.1f, 0.5f, 5).OnComplete(() =>
                     {
-                        nextStar += 2;
+                        nextStar += Global.got_star;
+                        // Global.cur_star = nextStar;
+                        // PlayerPrefs.SetInt("CurStar", Global.cur_star);
+                        Global.got_star = 0;
                         starEffect.SetActive(false);
                     });
                 });
@@ -432,6 +467,7 @@ namespace BilliardCruise.Sava.Scripts
             coinModel.SetActive(true);
 
             coinNum.SetActive(true);
+            coinNum.GetComponent<TMP_Text>().text = Global.got_coin.ToString();
 
             coinModel.transform.DOScale(Vector3.one, 0.2f).OnComplete(() =>
             {
@@ -462,14 +498,17 @@ namespace BilliardCruise.Sava.Scripts
                     coinDisplay.transform.DOPunchScale(Vector3.one * 0.1f, 0.5f, 5).OnComplete(() =>
                     {
                         coinEffect.SetActive(false);
-                        nextCoin += 250;
+                        nextCoin += Global.got_coin;
+                        // Global.cur_coin = nextCoin;
+                        // PlayerPrefs.SetInt("CurCoin", Global.cur_coin);
+                        Global.got_coin = 0;
                     });
-
-                    StartAnimation_Key();
+                    if (Global.got_key != 0)
+                    {
+                        StartAnimation_Key();
+                    }
                 });
             });
-
-
         }
 
 
@@ -479,6 +518,7 @@ namespace BilliardCruise.Sava.Scripts
             keyModel.SetActive(true);
 
             keyNum.SetActive(true);
+            keyNum.GetComponent<TMP_Text>().text = Global.cur_key.ToString();
 
             keyModel.transform.DOScale(Vector3.one, 0.2f).OnComplete(() =>
             {
@@ -509,7 +549,11 @@ namespace BilliardCruise.Sava.Scripts
                     keyDisplay.transform.DOPunchScale(Vector3.one * 0.1f, 0.5f, 5).OnComplete(() =>
                     {
                         keyEffect.SetActive(false);
-                        StartAnimation_ZoneBanner();
+                        // Global.cur_key += Global.got_key;
+                        // PlayerPrefs.SetInt("CurKey", Global.cur_key);
+                        Global.got_key = 0;
+                        if (Global.cur_key >= 2)
+                            StartAnimation_ZoneBanner();
                     });
                 });
             });
@@ -520,6 +564,8 @@ namespace BilliardCruise.Sava.Scripts
             zoneBanner.transform.localScale = Vector3.zero;
             zoneBanner.SetActive(true);
             zoneBanner.transform.DOScale(Vector3.one, 0.2f);
+            // pierItem.SetActive(true);
+
         }
 
         void OnDisable()
@@ -532,16 +578,10 @@ namespace BilliardCruise.Sava.Scripts
 
         public void OnClick_PlayGameUI()
         {
-
-            StartAnimCoin_Star();
-            StartAnimation_Coin();
-
-            return;
-
             obj_PlayGameUI.SetActive(true);
+            int lv = PlayerPrefs.GetInt("SavedLevel", 0);
+            c_lvTitle.text = "Level " + (lv + 1).ToString();
             isAcceptableSwipe = false;
-            //    uiBluer = GameObject.FindObjectOfType<UIBlur>();
-            // obj_PlayGameUI.GetComponent<Krivodeling.UI.Effects.UIBlur>().EditorFlipMode = FlipMode.Y;
             StartCoroutine(iRevertFlip());
         }
 
@@ -550,6 +590,8 @@ namespace BilliardCruise.Sava.Scripts
             yield return null;
             obj_PlayGameUI.GetComponent<Krivodeling.UI.Effects.UIBlur>().BuildFlipMode = FlipMode.Y;
         }
+
+
         public void OnClose_PlayGameUI()
         {
             obj_PlayGameUI.SetActive(false);
@@ -568,7 +610,7 @@ namespace BilliardCruise.Sava.Scripts
         {
             if (!isAcceptableSwipe)
                 return;
-            obj_windows[cur_window_id].GetComponent<RectTransform>().DOAnchorPosX(-2000f, 0.2f, false);
+            obj_windows[cur_window_id].GetComponent<RectTransform>().DOAnchorPosX(-3000f, 0.2f, false);
             Vector2 origin_size = obj_buttons[cur_window_id].GetComponent<RectTransform>().sizeDelta;
 
             obj_buttons[cur_window_id].GetComponent<RectTransform>().DOSizeDelta(new Vector2(300f, origin_size.y), 0.2f, false);
@@ -577,7 +619,7 @@ namespace BilliardCruise.Sava.Scripts
             obj_titles[cur_window_id].enabled = false;
             if (cur_window_id == (obj_windows.Length - 1))
             {
-                obj_windows[0].GetComponent<RectTransform>().anchoredPosition = new Vector2(2000f, 0f);
+                obj_windows[0].GetComponent<RectTransform>().anchoredPosition = new Vector2(3000f, 0f);
                 obj_windows[0].GetComponent<RectTransform>().DOAnchorPosX(0f, 0.2f, false).OnComplete(() =>
                 {
                     cur_window_id = 0;
@@ -589,7 +631,7 @@ namespace BilliardCruise.Sava.Scripts
             }
             else
             {
-                obj_windows[cur_window_id + 1].GetComponent<RectTransform>().anchoredPosition = new Vector2(2000f, 0f);
+                obj_windows[cur_window_id + 1].GetComponent<RectTransform>().anchoredPosition = new Vector2(3000f, 0f);
                 obj_buttons[cur_window_id + 1].GetComponent<RectTransform>().DOSizeDelta(new Vector2(559f, origin_size.y), 0.2f, false);
                 obj_buttons[cur_window_id + 1].GetComponent<Image>().color = Color.white;
                 obj_buttons[cur_window_id + 1].GetComponentsInChildren<RectTransform>()[1].DOScale(new Vector3(1.5f, 1.5f, 1f), 0.2f);
@@ -606,7 +648,7 @@ namespace BilliardCruise.Sava.Scripts
 
             if (!isAcceptableSwipe)
                 return;
-            obj_windows[cur_window_id].GetComponent<RectTransform>().DOAnchorPosX(2000f, 0.2f, false);
+            obj_windows[cur_window_id].GetComponent<RectTransform>().DOAnchorPosX(3000f, 0.2f, false);
 
             Vector2 origin_size = obj_buttons[cur_window_id].GetComponent<RectTransform>().sizeDelta;
 
@@ -617,7 +659,7 @@ namespace BilliardCruise.Sava.Scripts
 
             if (cur_window_id == 0)
             {
-                obj_windows[obj_windows.Length - 1].GetComponent<RectTransform>().anchoredPosition = new Vector2(-2000f, 0f);
+                obj_windows[obj_windows.Length - 1].GetComponent<RectTransform>().anchoredPosition = new Vector2(-3000f, 0f);
                 obj_buttons[obj_windows.Length - 1].GetComponent<RectTransform>().DOSizeDelta(new Vector2(559, origin_size.y), 0.2f, false);
                 obj_buttons[obj_windows.Length - 1].GetComponent<Image>().color = Color.white;
                 obj_buttons[obj_windows.Length - 1].GetComponentsInChildren<RectTransform>()[1].DOScale(new Vector3(1.5f, 1.5f, 1f), 0.2f);
@@ -629,7 +671,7 @@ namespace BilliardCruise.Sava.Scripts
             }
             else
             {
-                obj_windows[cur_window_id - 1].GetComponent<RectTransform>().anchoredPosition = new Vector2(-2000f, 0f);
+                obj_windows[cur_window_id - 1].GetComponent<RectTransform>().anchoredPosition = new Vector2(-3000f, 0f);
                 obj_buttons[cur_window_id - 1].GetComponent<RectTransform>().DOSizeDelta(new Vector2(559f, origin_size.y), 0.2f, false);
                 obj_buttons[cur_window_id - 1].GetComponent<Image>().color = Color.white;
                 obj_buttons[cur_window_id - 1].GetComponentsInChildren<RectTransform>()[1].DOScale(new Vector3(1.5f, 1.5f, 1f), 0.2f);
@@ -658,7 +700,7 @@ namespace BilliardCruise.Sava.Scripts
 
             if (cur_window_id == 0)
                 return;
-            obj_windows[cur_window_id].GetComponent<RectTransform>().DOAnchorPosX(-2000f, 0.2f, false);
+            obj_windows[cur_window_id].GetComponent<RectTransform>().DOAnchorPosX(-3000f, 0.2f, false);
             Vector2 origin_size = obj_buttons[cur_window_id].GetComponent<RectTransform>().sizeDelta;
 
             obj_buttons[cur_window_id].GetComponent<RectTransform>().DOSizeDelta(new Vector2(300f, origin_size.y), 0.2f, false);
@@ -668,7 +710,7 @@ namespace BilliardCruise.Sava.Scripts
 
 
 
-            obj_windows[0].GetComponent<RectTransform>().anchoredPosition = new Vector2(2000f, 0f);
+            obj_windows[0].GetComponent<RectTransform>().anchoredPosition = new Vector2(3000f, 0f);
             obj_windows[0].GetComponent<RectTransform>().DOAnchorPosX(0f, 0.2f, false).OnComplete(() =>
             {
                 // cur_window_id = 0;
@@ -685,7 +727,7 @@ namespace BilliardCruise.Sava.Scripts
         {
             if (cur_window_id == 1)
                 return;
-            obj_windows[cur_window_id].GetComponent<RectTransform>().DOAnchorPosX(-2000f, 0.2f, false);
+            obj_windows[cur_window_id].GetComponent<RectTransform>().DOAnchorPosX(-3000f, 0.2f, false);
             Vector2 origin_size = obj_buttons[cur_window_id].GetComponent<RectTransform>().sizeDelta;
 
             obj_buttons[cur_window_id].GetComponent<RectTransform>().DOSizeDelta(new Vector2(300f, origin_size.y), 0.2f, false);
@@ -695,7 +737,7 @@ namespace BilliardCruise.Sava.Scripts
 
 
 
-            obj_windows[1].GetComponent<RectTransform>().anchoredPosition = new Vector2(2000f, 0f);
+            obj_windows[1].GetComponent<RectTransform>().anchoredPosition = new Vector2(3000f, 0f);
             obj_windows[1].GetComponent<RectTransform>().DOAnchorPosX(0f, 0.2f, false).OnComplete(() =>
             {
                 // cur_window_id = 1;
@@ -711,7 +753,7 @@ namespace BilliardCruise.Sava.Scripts
         {
             if (cur_window_id == 2)
                 return;
-            obj_windows[cur_window_id].GetComponent<RectTransform>().DOAnchorPosX(-2000f, 0.2f, false);
+            obj_windows[cur_window_id].GetComponent<RectTransform>().DOAnchorPosX(-3000f, 0.2f, false);
             Vector2 origin_size = obj_buttons[cur_window_id].GetComponent<RectTransform>().sizeDelta;
 
             obj_buttons[cur_window_id].GetComponent<RectTransform>().DOSizeDelta(new Vector2(300f, origin_size.y), 0.2f, false);
@@ -721,7 +763,7 @@ namespace BilliardCruise.Sava.Scripts
 
 
 
-            obj_windows[2].GetComponent<RectTransform>().anchoredPosition = new Vector2(2000f, 0f);
+            obj_windows[2].GetComponent<RectTransform>().anchoredPosition = new Vector2(3000f, 0f);
             obj_windows[2].GetComponent<RectTransform>().DOAnchorPosX(0f, 0.2f, false).OnComplete(() =>
             {
                 // cur_window_id = 2;
@@ -737,7 +779,7 @@ namespace BilliardCruise.Sava.Scripts
         {
             if (cur_window_id == 3)
                 return;
-            obj_windows[cur_window_id].GetComponent<RectTransform>().DOAnchorPosX(-2000f, 0.2f, false);
+            obj_windows[cur_window_id].GetComponent<RectTransform>().DOAnchorPosX(-3000f, 0.2f, false);
             Vector2 origin_size = obj_buttons[cur_window_id].GetComponent<RectTransform>().sizeDelta;
 
             obj_buttons[cur_window_id].GetComponent<RectTransform>().DOSizeDelta(new Vector2(300f, origin_size.y), 0.2f, false);
@@ -747,7 +789,7 @@ namespace BilliardCruise.Sava.Scripts
 
 
 
-            obj_windows[3].GetComponent<RectTransform>().anchoredPosition = new Vector2(2000f, 0f);
+            obj_windows[3].GetComponent<RectTransform>().anchoredPosition = new Vector2(3000f, 0f);
             obj_windows[3].GetComponent<RectTransform>().DOAnchorPosX(0f, 0.2f, false).OnComplete(() =>
             {
                 // cur_window_id = 3;
@@ -763,7 +805,7 @@ namespace BilliardCruise.Sava.Scripts
         {
             if (cur_window_id == 4)
                 return;
-            obj_windows[cur_window_id].GetComponent<RectTransform>().DOAnchorPosX(-2000f, 0.2f, false);
+            obj_windows[cur_window_id].GetComponent<RectTransform>().DOAnchorPosX(-3000f, 0.2f, false);
             Vector2 origin_size = obj_buttons[cur_window_id].GetComponent<RectTransform>().sizeDelta;
 
             obj_buttons[cur_window_id].GetComponent<RectTransform>().DOSizeDelta(new Vector2(300f, origin_size.y), 0.2f, false);
@@ -773,7 +815,7 @@ namespace BilliardCruise.Sava.Scripts
 
 
 
-            obj_windows[4].GetComponent<RectTransform>().anchoredPosition = new Vector2(2000f, 0f);
+            obj_windows[4].GetComponent<RectTransform>().anchoredPosition = new Vector2(3000f, 0f);
             obj_windows[4].GetComponent<RectTransform>().DOAnchorPosX(0f, 0.2f, false).OnComplete(() =>
             {
                 // cur_window_id = 4;
@@ -798,7 +840,9 @@ namespace BilliardCruise.Sava.Scripts
                 if (loadingTime >= 3f)
                     break;
             }
-            SceneManager.LoadScene(str_nextSceneName);
+
+            int lv = PlayerPrefs.GetInt("SavedLevel", 0);
+            SceneManager.LoadScene("Level0" + lv);
         }
 
 

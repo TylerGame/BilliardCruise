@@ -23,6 +23,8 @@ namespace BilliardCruise.Sava.Scripts
             // CreateBalls();
             // RackBalls();
             CreatePlayers();
+
+
         }
 
         public override void OnPlayerReady()

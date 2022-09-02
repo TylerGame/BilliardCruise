@@ -307,17 +307,18 @@ namespace BilliardCruise.Sava.Scripts
                 if (poolManager.IsCueBallSelected(initialTouchPos))
                     strength = 1f;
                 else if (Vector3.Dot(castDirection, initialTouchPos - cueBall.transform.position) < 0)
-                    strength = 1f;
+                    strength = 1f;                 
                 if (isDrawableGuideLine)
                 {
                     if (strength > 0.05f)
                     {
+                    
                         HitCueBall(strength);
                         GameManager.Instance.UpdateMoves();
                     }
-
                     HideIndicators();
                 }
+                                
                 isDrawableGuideLine = false;
                 hitCharge = 0f;
             }

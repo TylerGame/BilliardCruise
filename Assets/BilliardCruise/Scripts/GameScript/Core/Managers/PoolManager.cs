@@ -198,6 +198,9 @@ namespace BilliardCruise.Sava.Scripts
 
         GameObject[] monsters;
 
+
+        public Vector3 undoPrevPos = Vector3.zero;
+
         // public virtual void UpdateBalls()
         // {
         //     balls = new List<Ball>();
@@ -324,13 +327,10 @@ namespace BilliardCruise.Sava.Scripts
         {
             Turn turn = new Turn(player, isBreak);
             turns.Add(turn);
-
             string msg = Formatter.FormatName(player.playerName) + "'s turn.";
             //      ShowMsg(msg);
-
             player.SetTurnState();
             WaitingPlayer.SetWaitState();
-
             turnCount++;
         }
 
@@ -361,27 +361,39 @@ namespace BilliardCruise.Sava.Scripts
                 if (monster.GetComponent<Monster>().monsterType == Monster.MonsterType.Fish)
                     monster.GetComponent<Monster>().AttackPlayer();
             }
+            yield return new WaitForSeconds(1f);
 
+            // Undo System
+            foreach (GameObject monster in monsters)
+            {
+                monster.GetComponent<Monster>().SaveUndo();
+            }
+            for (int i = 0; i < GameManager.GetBallCount(); i++)
+            {
+                Ball ball = GameManager.GetBall(i);
+                ball.SaveUndo();
+            }
+            GameObject[] pockets = GameObject.FindGameObjectsWithTag("Pocket");
+            foreach (GameObject pocket in pockets)
+            {
+                pocket.GetComponent<Pocket>().SaveUndo();
+            }
+
+            GameManager.Instance.SaveUndo();
             if (timeFoul)
             {
                 PlayFoulSound();
-
                 string msg = Formatter.FormatName(CurrentPlayer.playerName) + " ran out of time.";
                 ShowMsg(msg);
-
                 msg = Formatter.FormatName(WaitingPlayer.playerName) + " has the ball in hand.";
                 ShowMsg(msg);
-
                 SwapTurns(true);
-
                 yield break;
             }
-
             MoveType move = CheckMove(CurrentTurn);
             CurrentTurn.SetMoveType(move);
             //test
             move = MoveType.SCORED;
-
             if (move == MoveType.WIN)
             {
                 ConcludeGame(CurrentPlayer);
@@ -394,7 +406,6 @@ namespace BilliardCruise.Sava.Scripts
             {
                 string msg = Formatter.FormatName(WaitingPlayer.playerName) + " has the ball in hand.";
                 ShowMsg(msg);
-
                 SwapTurns(true);
             }
             else if (move == MoveType.SCORED)
@@ -405,7 +416,6 @@ namespace BilliardCruise.Sava.Scripts
             {
                 SwapTurns();
             }
-
             UpdateRemainingBalls();
         }
 
@@ -443,6 +453,19 @@ namespace BilliardCruise.Sava.Scripts
                     Debug.Log("BBB");
                     GameManager.Instance.isGameEnding = true;
                     GameUI.Instance.ShowRewardPopup();
+
+
+                    Global.got_key += GameManager.Instance.gameData.levels[GameManager.Instance.level].reward.key;
+                    Global.cur_key += Global.got_key;
+                    PlayerPrefs.SetInt("CurKey", Global.cur_key);
+                    Global.got_coin += GameManager.Instance.gameData.levels[GameManager.Instance.level].reward.coin;
+                    Global.cur_coin += Global.got_coin;
+                    PlayerPrefs.SetInt("CurCoin", Global.cur_coin);
+                    Global.got_star += GameManager.Instance.gameData.levels[GameManager.Instance.level].reward.star;
+                    Global.cur_star += Global.got_star;
+                    PlayerPrefs.SetInt("CurStar", Global.cur_star);
+
+
                     GameObject[] monsters = GameObject.FindGameObjectsWithTag("Monster");
                     foreach (GameObject monster in monsters)
                     {
@@ -462,6 +485,9 @@ namespace BilliardCruise.Sava.Scripts
                     Debug.Log("DDD");
                     // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                     GameManager.Instance.isGameEnding = true;
+                    // Global.got_key = 0;
+                    // Global.got_coin = 0;
+                    // Global.got_star = 0;
                     GameUI.Instance.ShowLoosePopup();
                 }
             }
@@ -866,11 +892,8 @@ namespace BilliardCruise.Sava.Scripts
         private IEnumerator TimerCo(Player player)
         {
             yield break;
-
-
             float totalTime = player.CueController.MaxTimePerMove;
             Timer playerTimer = player.ui.timer;
-
             float timer = 0;
             while (timer < totalTime)
             {

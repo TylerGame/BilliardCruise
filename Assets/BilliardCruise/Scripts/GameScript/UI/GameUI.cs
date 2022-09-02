@@ -50,7 +50,9 @@ namespace BilliardCruise.Sava.Scripts
         [SerializeField]
         Image obj_loadingBarForeground;
         [SerializeField]
-        public Image c_text1, c_text2, c_text3, c_text4;
+        public TMP_Text c_text1, c_text2, c_text3, c_text4;
+
+        public GameObject headline;
         public enum AnimationName
         {
             ClickMove,
@@ -84,8 +86,17 @@ namespace BilliardCruise.Sava.Scripts
             EnableControls(false);
             loadingUI.SetActive(false);
             UpdateTopUI();
-            // StartCoroutine(iTest());
-            Debug.Log("Global Test === " + Global.coin);
+            headline.transform.localPosition = new Vector3(0f, -3000f, 0f);
+        }
+
+
+
+        void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                SceneManager.LoadScene("Menu");
+            }
         }
 
         IEnumerator iTest()
@@ -98,6 +109,19 @@ namespace BilliardCruise.Sava.Scripts
         {
             txt_goals.text = GameManager.Instance.goal.ToString() + "/" + GameManager.Instance.gameData.levels[GameManager.Instance.level].goal.ToString();
             txt_moves.text = GameManager.Instance.moves.ToString();
+        }
+
+        public void ShowHeadLine()
+        {
+            StartCoroutine(iShowHeadLine());
+        }
+
+        IEnumerator iShowHeadLine()
+        {
+            yield return null;
+            headline.transform.DOMoveY(0f, 0.3f);
+            yield return new WaitForSeconds(1f);
+            headline.transform.DOMoveY(-3000f, 0.3f);
         }
 
         public void DoClickAnim(AnimationName nm)
@@ -171,7 +195,11 @@ namespace BilliardCruise.Sava.Scripts
             levelPopup.SetActive(false);
             loosePopup.SetActive(false);
             rewardPopup.SetActive(true);
-
+            rewardPopup.GetComponent<WinPopupUI>().SetRewards(GameManager.Instance.gameData.levels[GameManager.Instance.level].reward.coin, GameManager.Instance.gameData.levels[GameManager.Instance.level].reward.star, GameManager.Instance.gameData.levels[GameManager.Instance.level].reward.key);
+            if (GameManager.Instance.level != 1)
+                PlayerPrefs.SetInt("SavedLevel", 1);
+            else
+                PlayerPrefs.SetInt("SavedLevel", 0);
             rewardPopup.GetComponent<RectTransform>().DOPunchScale(Vector3.one * 0.3f, 0.5f, 0, 1).OnComplete(() =>
             {
                 rewardPopup.GetComponent<WinPopupUI>().StartEffect();

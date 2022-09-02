@@ -7,9 +7,14 @@ namespace BilliardCruise.Sava.Scripts
 
     public class Global
     {
-        public static int coin;
-        public static int star;
-        public static int key;
+        public static int cur_coin;
+        public static int cur_star;
+        public static int cur_key;
+
+
+        public static int got_coin;
+        public static int got_star;
+        public static int got_key;
     }
 }
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 using DG.Tweening;
 
 namespace BilliardCruise.Sava.Scripts
@@ -14,9 +15,7 @@ namespace BilliardCruise.Sava.Scripts
         [SerializeField]
         string str_NextSceneName;
 
-        [SerializeField] private Image c_text1, c_text2, c_text3, c_text4;
-
-
+        [SerializeField] private TMP_Text c_text1, c_text2, c_text3, c_text4;
 
         // Start is called before the first frame update
         void Start()

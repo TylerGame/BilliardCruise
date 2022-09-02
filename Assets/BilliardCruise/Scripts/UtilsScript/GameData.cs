@@ -28,7 +28,7 @@ namespace BilliardCruise.Sava.Scripts
     [Serializable]
     public class Booster
     {
-        public enum BoosterType { Arrow, Muscle, Dice, Eye };
+        public enum BoosterType { Arrow, Muscle, Dice, Eye, Undo };
         // [Header("Sort of Booster")]
         public BoosterType booster;
         // [Header("Sprite of Active Booster Icon")]
@@ -37,6 +37,14 @@ namespace BilliardCruise.Sava.Scripts
         public Sprite deactive_icon;
         // [Header("Number of Booster Usage")]
         public int count = 1;
+    }
+
+    [Serializable]
+    public class Reward
+    {
+        public int coin;
+        public int star;
+        public int key;
     }
 
     [Serializable]
@@ -50,7 +58,10 @@ namespace BilliardCruise.Sava.Scripts
         // [Header("Number of Goal")]
         public int goal = 3;
 
+
         public List<Booster> boosters;
+
+        public Reward reward;
     }
 
 

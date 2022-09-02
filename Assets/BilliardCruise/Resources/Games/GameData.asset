@@ -24,11 +24,19 @@ MonoBehaviour:
     - booster: 1
       active_icon: {fileID: 21300000, guid: 1a49bb2dbd9b22440b328f629fd5a0f5, type: 3}
       deactive_icon: {fileID: 21300000, guid: d929e781c125bb64a8124a79bbfeb61f, type: 3}
-      count: 2
+      count: 1
     - booster: 3
       active_icon: {fileID: 21300000, guid: 16ba6aba5f708484c96eeff74424d41f, type: 3}
       deactive_icon: {fileID: 21300000, guid: 2da59b29a7673ca4e90bd963d6adb9d0, type: 3}
-      count: 2
+      count: 1
+    - booster: 4
+      active_icon: {fileID: 21300000, guid: 4c5ca6876e74cc242966f34dbe1e1316, type: 3}
+      deactive_icon: {fileID: 21300000, guid: af506ce33e5c1794d994d3e049227f98, type: 3}
+      count: 50
+    reward:
+      coin: 400
+      star: 1
+      key: 1
   - level: 2
     moves: 15
     goal: 4
@@ -44,4 +52,12 @@ MonoBehaviour:
     - booster: 3
       active_icon: {fileID: 21300000, guid: 16ba6aba5f708484c96eeff74424d41f, type: 3}
       deactive_icon: {fileID: 21300000, guid: 2da59b29a7673ca4e90bd963d6adb9d0, type: 3}
-      count: 3
+      count: 1
+    - booster: 4
+      active_icon: {fileID: 21300000, guid: 4c5ca6876e74cc242966f34dbe1e1316, type: 3}
+      deactive_icon: {fileID: 21300000, guid: af506ce33e5c1794d994d3e049227f98, type: 3}
+      count: 50
+    reward:
+      coin: 150
+      star: 1
+      key: 1

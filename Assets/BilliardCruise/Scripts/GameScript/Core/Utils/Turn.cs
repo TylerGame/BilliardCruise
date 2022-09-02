@@ -104,6 +104,14 @@ namespace BilliardCruise.Sava.Scripts
             }
         }
 
+        public void RemoveBallFromPocket(Ball ball)
+        {
+            if (!PocketedBalls.Contains(ball.BallNumber))
+            {
+                PocketedBalls.Remove(ball.BallNumber);
+            }
+        }
+
         public void SetMoveType(MoveType type)
         {
             MoveType = type;
